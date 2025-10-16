@@ -1,0 +1,185 @@
+.header__upper-container {
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__link-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__socialLinks-container {
+  width: 250px;
+  text-align: end;
+}
+
+.header__socialLinks-title {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 15px;
+  font-family: SairaCondensed Bold, sans-serif;
+}
+
+.header__logo {
+  height: 250px;
+  width: 250px;
+}
+
+.header__lower-container {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.header__number {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Bold, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__number:hover {
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+}
+
+.header__email {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Bold, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__email:hover {
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+}
+
+.header__address {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Bold, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header__address:hover {
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+}
+
+.header__about-us {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Medium, sans-serif;
+  font-size: 19px;
+}
+
+.header__about-us:hover {
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+}
+
+.header__window-tint {
+  color: #fff;
+  text-decoration: #fff;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Medium, sans-serif;
+  font-size: 19px;
+}
+
+.header__window-tint:hover {
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+}
+
+.header__ceramic-coatings {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Medium, sans-serif;
+  font-size: 19px;
+}
+
+.header__ceramic-coatings:hover {
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+}
+
+.header__price-lists {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Medium, sans-serif;
+  font-size: 19px;
+}
+
+.header__price-lists:hover {
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    display: block;
+    padding: 0;
+  }
+
+  .header__upper-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header__logo {
+    height: 100px;
+    width: 100px;
+  }
+
+  .header__link-container {
+    gap: 3px;
+  }
+
+  .header__socialLinks-container {
+    margin-bottom: 10px;
+  }
+
+  .header__socialLinks-title {
+    margin-bottom: 10px;
+    margin-top: 0px;
+  }
+
+  .header__number {
+    text-align: center;
+  }
+
+  .header__email {
+    text-align: center;
+  }
+
+  .header__address {
+    text-align: center;
+  }
+}

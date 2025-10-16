@@ -1,0 +1,135 @@
+.service__price-list-title {
+  color: #fff;
+  text-align: center;
+  font-family: SairaCondensed Bold, sans-serif;
+  font-size: 24px;
+}
+
+.service__price-list-description {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  width: 60%;
+  font-family: SairaCondensed Bold, sans-serif;
+  font-size: 18px;
+}
+
+.service__price-list-title {
+  text-align: center;
+  font-family: var(--ff-display, "Saira Condensed", sans-serif);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.service__price-list-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  color: #cfe8ee;
+}
+
+.service__price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  align-items: start;
+  padding: 0 1rem;
+}
+
+.service__price-grid img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid rgba(57, 236, 254, 0.25);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  background: #0f1a2e;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service__price-grid img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.service__price-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  cursor: zoom-out;
+}
+
+.service__price-overlay-image {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  border: 2px solid #39ecfe;
+  box-shadow: 0 0 20px rgba(57, 236, 254, 0.4);
+}
+
+.service__price-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(29, 43, 69, 0.7);
+  border: none;
+  color: #39ecfe;
+  border-radius: 50%;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1000;
+}
+
+.service__price-nav:hover {
+  background: rgba(57, 236, 254, 0.2);
+}
+
+.service__price-nav--prev {
+  left: 30px;
+}
+
+.service__price-nav--next {
+  right: 30px;
+}
+
+.service__price-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  background: none;
+  border: none;
+  color: #39ecfe;
+  cursor: pointer;
+  z-index: 1001;
+  transition: transform 0.2s ease;
+}
+
+.service__price-close:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 900px) {
+  .service__price-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .service__price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service__price-grid img {
+    max-width: 90%;
+  }
+}

@@ -1,0 +1,79 @@
+.video__card {
+  background: #0f1a2e;
+  border: 1px solid rgba(57, 236, 254, 0.25);
+  border-radius: 12px;
+  padding: 1rem;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.video__card-iframe,
+.video__card-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.video__card-thumb {
+  display: block;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.video__card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.video__card-play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #39ecfe;
+  color: #1d2b45;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.video__card-thumb:hover .video__card-image {
+  transform: scale(1.03);
+}
+.video__card-thumb:hover .video__card-play {
+  transform: scale(1.06);
+  background: #1ddbe0;
+}
+
+.video__card-iframe iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video__card-title {
+  margin: 0;
+  font-family: SairaCondensed Medium, sans-serif;
+  font-size: 19px;
+}
+
+.video__card-description {
+  margin: 0;
+  color: #cfe8ee;
+  line-height: 1.5;
+}

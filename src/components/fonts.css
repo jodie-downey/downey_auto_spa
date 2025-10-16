@@ -1,0 +1,14 @@
+@font-face {
+  font-family: SairaCondensed Bold;
+  src: url(../vendor/SairaCondensed-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: SairaCondensed Medium;
+  src: url(../vendor/SairaCondensed-Regular.ttf);
+}
+
+@font-face {
+  font-family: Molle;
+  src: url(../vendor/Molle-Italic.ttf);
+}
