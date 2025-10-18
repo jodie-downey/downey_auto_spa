@@ -1,5 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
+
 import Main from "../Main/Main";
 import AboutUs from "../AboutUs/AboutUs";
 import WindowTintPackages from "../WindowTintPackages/WindowTintPackages";
@@ -10,7 +11,17 @@ import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
+import { getweather, filterWeatherData } from "../WeatherCard/WeatherCard";
+
 function App() {
+  const [weatherData, setWeatherData] = useState({
+    type: "cold",
+    temp: { F: 999, C: 999 },
+    city: "",
+    condition: "",
+    isDay: false,
+  });
+
   const [activeModal, setActiveModal] = useState("");
 
   //*API toggle switch
@@ -26,7 +37,10 @@ function App() {
     setActiveModal("");
   };
 
-  const handleQuoteModalSubmit = console.log("quote modal submitted");
+  const handleQuoteModalSubmit = (e) => {
+    console.log("quote modal submitted");
+    closeActiveModal();
+  };
   //const handleQuoteModalSubmit = ({})=>{
   //APICALL({}).then((data) => {handle data here ; closeActiveModal();})
   //.catch((error) => {console.error(insert proper error message)})}
@@ -57,20 +71,27 @@ function App() {
     };
   }, [activeModal]);
 
+  useEffect(() => {
+    getweather(coordinates, APIkey)
+      .then((data) => {
+        const filteredData = filterWeatherData(data);
+        setWeatherData(filteredData);
+      })
+      .catch(console.error);
+  }, []);
+
   return (
     <div className="page">
       <div className="page__content">
         <Header />
         <Routes>
+          <Route path="/" element={<Main weatherData={weatherData} />}></Route>
           <Route
-            path="/"
+            path="/about"
             element={
-              <Main
-              //weatherData={weatherData}
-              />
+              <AboutUs handleQuoteButtonClick={handleQuoteButtonClick} />
             }
           ></Route>
-          <Route path="/about" element={<AboutUs />}></Route>
           <Route
             path="/window-tint-packages"
             element={<WindowTintPackages />}

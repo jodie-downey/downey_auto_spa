@@ -13,6 +13,7 @@ import terraImage from "../assets/excavator2.webp";
 import dualImage from "../assets/dualreflectiveoutside.webp";
 import silverImage from "../assets/spinestopside.webp";
 import ceramicImage from "../assets/axisfull.webp";
+import leather from "../assets/leather.webp";
 
 const services = [
   {
@@ -84,7 +85,7 @@ const services = [
       "Temp resistance up to 500 degrees",
       "Impact resistance up to 80 in/lb",
     ],
-    image: maxImage,
+    image: leather,
   },
   {
     title: "Wheel SystemX Ceramic Coating",

@@ -6,6 +6,7 @@ function ServiceCard({
   image,
   quoteLink = "#",
   priceLink = "#",
+  onQuoteButtonClick,
 }) {
   return (
     <div className="service__card">
@@ -21,18 +22,19 @@ function ServiceCard({
         })}
       </ul>
       <div className="service__card-buttons">
-        <a
+        <button
           className="service__card-button service__card-button-price"
           href={priceLink}
         >
           View Price Lists
-        </a>
-        <a
+        </button>
+        <button
           className="service__card-button service__card-button-quote"
           href={quoteLink}
+          onClick={onQuoteButtonClick}
         >
           Get a Custom Quote
-        </a>
+        </button>
       </div>
     </div>
   );

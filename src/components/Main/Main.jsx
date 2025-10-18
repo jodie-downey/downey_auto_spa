@@ -1,5 +1,6 @@
 import "./main.css";
 import "../TintGallery/TintGallery";
+import WeatherCard from "../WeatherCard/WeatherCard";
 
 import proImage from "../../assets/proplus.webp";
 import traverse from "../../assets/traverse.webp";
@@ -173,6 +174,7 @@ function Main() {
           </p>
         </div>
       </div>
+      <WeatherCard weatherData={weatherData} />
       <div className="main__tint-gallery">
         <h3 className="main__tint-gallery-title">
           SAVE MONEY ON ENERGY SAVINGS AND TRANSFORM YOUR HOME OR OFFICE

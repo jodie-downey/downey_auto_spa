@@ -11,7 +11,11 @@ function QuoteModal({
   onQuoteModalSubmit,
   handleQuoteButtonClick,
 }) {
-  const handleSubmit = console.log("submit pressed in modal");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    onQuoteModalSubmit();
+    console.log("submit pressed in modal");
+  };
   //const handleSubmit = (e) => {
   // e.preventDefault();
   // onQuoteModalSubmit({insert suubmission params here}) }
@@ -22,7 +26,7 @@ function QuoteModal({
       buttonText="Press Here for your custom quote"
       activeModal={activeModal}
       handleCloseClick={handleCloseClick}
-      onQuoteModalSubmit={handleSubmit}
+      onSubmit={handleSubmit}
       handleQuoteButtonClick={handleQuoteButtonClick}
     >
       <label
@@ -77,13 +81,6 @@ function QuoteModal({
           required
         />
       </label>
-      <button
-        type="button"
-        className="modal__button"
-        onClick={onQuoteModalSubmit}
-      >
-        Press Here for your custom quote
-      </button>
     </ModalWithForm>
   );
 }

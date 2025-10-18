@@ -2,7 +2,7 @@ import ServiceCard from "../ServiceCard/ServiceCard";
 import services from "../../utils/services";
 import "./AboutUs.css";
 
-function AboutUs() {
+function AboutUs({ handleQuoteButtonClick }) {
   return (
     <div className="about__us-service-list">
       {services.map((service, index) => {
@@ -12,6 +12,7 @@ function AboutUs() {
             title={service.title}
             description={service.description}
             image={service.image}
+            onQuoteButtonClick={handleQuoteButtonClick}
           />
         );
       })}
