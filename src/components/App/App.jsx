@@ -11,7 +11,9 @@ import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-import { getweather, filterWeatherData } from "../WeatherCard/WeatherCard";
+import { getweather, filterWeatherData } from "../../utils/weatherApi";
+import { coordinates, APIkey } from "../../utils/constants";
+console.log(import.meta.env.VITE_OPENWEATHER_KEY);
 
 function App() {
   const [weatherData, setWeatherData] = useState({
@@ -44,16 +46,18 @@ function App() {
   //const handleQuoteModalSubmit = ({})=>{
   //APICALL({}).then((data) => {handle data here ; closeActiveModal();})
   //.catch((error) => {console.error(insert proper error message)})}
+  getweather().then((data) => {
+    console.log("weather connected", data);
+  });
 
-  //*API
-  //useEffect(() => {
-  //getweather(coordinates, APIkey)
-  //.then((data) => {
-  //const filteredData = filterWeatherData(data);
-  //setWeatherData(filteredData);
-  //})
-  //.catch(console.error);
-  //}, []);
+  useEffect(() => {
+    getweather(coordinates, APIkey)
+      .then((data) => {
+        const filteredData = filterWeatherData(data);
+        setWeatherData(filteredData);
+      })
+      .catch(console.error);
+  }, []);
 
   useEffect(() => {
     if (!activeModal) return;
