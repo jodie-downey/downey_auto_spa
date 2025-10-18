@@ -4,6 +4,8 @@ import { useContext } from "react";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTempetureContext";
 
 function WeatherCard({ weatherData }) {
+  if (!weatherData) return <p>Loading weather...</p>;
+
   const { currentTemperatureUnit } = useContext(CurrentTemperatureUnitContext);
 
   const weatherOption = weatherOptions.filter((option) => {

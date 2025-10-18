@@ -110,7 +110,7 @@ const archTintItems = [
   },
 ];
 
-function Main() {
+function Main({ weatherData }) {
   return (
     <main className="main">
       <div className="main__upper">
