@@ -6,7 +6,7 @@ import App from "./components/App/App";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter basename="/">
+    <BrowserRouter basename="/downey_auto_spa">
       <App />
     </BrowserRouter>
   </React.StrictMode>

@@ -1,27 +1,10 @@
 import { checkResponse } from "./api";
 import services from "./services";
 
-//export const getWeather = (latitude, longitude, APIkey) => {
-//return fetch(
-// `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
-// ).then(checkResponse);
-//};
-export const getWeather = (lat, lon, APIkey) => {
-  console.log("Fetching weather for lat:", lat, "lon:", lon);
-
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=imperial&appid=${APIkey}`
-      )
-        .then((res) => {
-          if (!res.ok) throw new Error("Weather fetch failed");
-          return res.json();
-        })
-        .then(resolve)
-        .catch(reject);
-    }, 3000); // 👈 delay by 3 seconds to test preloader
-  });
+export const getWeather = (latitude, longitude, APIkey) => {
+  return fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=imperial&appid=${APIkey}`
+  ).then(checkResponse);
 };
 
 export const filterWeatherData = (data) => {
