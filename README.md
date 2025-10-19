@@ -1,16 +1,80 @@
-# React + Vite
+# Downey Auto Spa — Full-Stack MVP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
 
-Currently, two official plugins are available:
+Downey Auto Spa is a professional automotive and architectural detailing web application built to modernize client interaction, streamline service presentation, and demonstrate real API integration.
+This MVP reflects the complete front-end architecture, reusable component design, and live weather-based recommendations tailored for clients in Franklin, KY and surrounding areas.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Core Features
 
-## React Compiler
+✅ Reusable Components
+Built with modular, scalable React components such as ServiceCard, ModalWithForm, and VideoCard, ensuring maintainability and flexibility for future API integrations.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+✅ Dynamic Weather Integration (OpenWeather API)
+Fetches live local weather conditions and filters them through a custom logic function to provide relevant service recommendations.
+Example: “Clear skies with high UV? — Recommend Nanoflex Tint + Max G+ Ceramic Coating.”
 
-## Expanding the ESLint configuration
+✅ Custom Modal System
+Reused across multiple form types, styled with the brand’s accent color (#39ecfe).
+Includes keyboard accessibility, click-outside close handling, and a reusable form layout (ModalWithForm).
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+✅ Service Catalog Grid
+A visually dynamic, responsive grid layout featuring all detailing, tinting, and ceramic coating packages.
+Supports internal routing for deep-linking to pricing and quote request pages.
+
+✅ Preloader Component (MVP)
+Branded loading animation while fetching live weather data, built for future expansion into global async events like form submissions.
+
+## Design & Branding
+
+Color Palette: Deep navy background #1d2b45 + Electric blue accent #39ecfe
+
+Typography: Saira Condensed (bold/medium), Molle (accent headings)
+
+Visual Theme: Clean, professional, modern with high-contrast legibility
+
+Icons: Lucide-React for lightweight, consistent line icons
+
+## Tech Stack
+
+Frontend: React (Vite)
+
+Styling: CSS3 (BEM methodology)
+
+API Integration: OpenWeather API
+
+Icons: Lucide-React
+
+### Live Project
+
+[View Live Site](https://jodie-downey.github.io/downey_auto_spa/)
+
+## ## Weather-Based Service Logic
+
+Implemented inside filterWeatherData() and getServiceRecommendations().
+
+Condition Recommended Services
+☀️ Clear & Hot Nanoflex Tint, Max G+ Coating
+🌧️ Rain Glass+ Coating, Terraflex Tint
+❄️ Snow Pro+ Coating, Glass+ Coating
+🌫️ Mist/Fog Glass+ Coating, Terraflex Tint
+☁️ Mild/Overcast Pro+ Coating, Panaflex Tint
+
+Each condition maps to actual services displayed dynamically in the WeatherRecommendations component.
+
+## Future Iterations
+
+Form submission with backend notifications (email or API)
+
+Global preloader during quote submissions
+
+Day/night adaptive header accents
+
+API-based customer reviews integration
+
+Expanded data-driven recommendations using UV, IR, and humidity values
+
+## Author
+
+Jodie Downey
+Owner/Operator of Downey Auto Spa • Software Engineering Student, TripleTen
