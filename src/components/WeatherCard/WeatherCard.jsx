@@ -21,8 +21,8 @@ function WeatherCard({ weatherData }) {
       : defaultWeatherOption[weatherData.isDay ? "day" : "night"];
 
   return (
-    <section className="weather-card">
-      <p className="weather-card__temp">
+    <section className="weather__card">
+      <p className="weather__card-temp">
         {weatherData.temp[currentTemperatureUnit]} &deg;{" "}
         {currentTemperatureUnit}
       </p>

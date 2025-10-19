@@ -4,6 +4,14 @@
   background: rgb(57, 236, 254, 0.7);
   border-radius: 35%;
 }
+.weather-section {
+  background-color: #1d2b45;
+  padding: 40px 0;
+  min-height: 300px; /* keeps visible space even before load */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .main__upper-title {
   color: #1d2b45;

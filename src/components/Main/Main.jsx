@@ -1,6 +1,5 @@
 import "./main.css";
 import "../TintGallery/TintGallery";
-import WeatherCard from "../WeatherCard/WeatherCard";
 
 import proImage from "../../assets/proplus.webp";
 import traverse from "../../assets/traverse.webp";
@@ -19,6 +18,8 @@ import silverReflective from "../../assets/spinestopfull.webp";
 import partialHome from "../../assets/partialhome.webp";
 
 import TintGallery from "../TintGallery/TintGallery";
+import WeatherRecommendations from "../WeatherRecommendations/WeatherRecommendations";
+import Preloader from "../Preloader/Preloader";
 
 const archTintItems = [
   {
@@ -174,7 +175,13 @@ function Main({ weatherData }) {
           </p>
         </div>
       </div>
-      <WeatherCard weatherData={weatherData} />
+      <section className="weather-section">
+        {!weatherData ? (
+          <Preloader message="Loading live weather..." />
+        ) : (
+          <WeatherRecommendations weatherData={weatherData} />
+        )}
+      </section>
       <div className="main__tint-gallery">
         <h3 className="main__tint-gallery-title">
           SAVE MONEY ON ENERGY SAVINGS AND TRANSFORM YOUR HOME OR OFFICE

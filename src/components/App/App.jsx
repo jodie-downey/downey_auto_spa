@@ -7,29 +7,39 @@ import WindowTintPackages from "../WindowTintPackages/WindowTintPackages";
 import ServicePriceLists from "../ServicePriceLists/ServicePriceLists";
 import CeramicCoatings from "../CeramicCoatings/CeramicCoatings";
 import QuoteModal from "../QuoteModal/QuoteModal";
+import CurrentTemperatureUnitContext from "../../contexts/CurrentTempetureContext";
 import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
-import { getweather, filterWeatherData } from "../../utils/weatherApi";
-import { coordinates, APIkey } from "../../utils/constants";
-console.log(import.meta.env.VITE_OPENWEATHER_KEY);
+import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 
 function App() {
-  const [weatherData, setWeatherData] = useState({
-    type: "cold",
-    temp: { F: 999, C: 999 },
-    city: "",
-    condition: "",
-    isDay: false,
-  });
+  const [weatherData, setWeatherData] = useState(null);
 
   const [activeModal, setActiveModal] = useState("");
+  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
 
   //*API toggle switch
   //const handleToggleSwitchChange = () => {
   //setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
   //};
+
+  useEffect(() => {
+    const lat = 36.7223;
+    const lon = -86.5772;
+    const APIkey = import.meta.env.VITE_OPENWEATHER_KEY;
+
+    getWeather(lat, lon, APIkey)
+      .then((data) => {
+        const filtered = filterWeatherData(data);
+        setWeatherData(filtered);
+        console.log("Filtered data:", filtered);
+      })
+      .catch((err) => {
+        console.error("weather fetch failed", err);
+      });
+  }, []);
 
   const handleQuoteButtonClick = () => {
     setActiveModal("get quote");
@@ -46,18 +56,6 @@ function App() {
   //const handleQuoteModalSubmit = ({})=>{
   //APICALL({}).then((data) => {handle data here ; closeActiveModal();})
   //.catch((error) => {console.error(insert proper error message)})}
-  getweather().then((data) => {
-    console.log("weather connected", data);
-  });
-
-  useEffect(() => {
-    getweather(coordinates, APIkey)
-      .then((data) => {
-        const filteredData = filterWeatherData(data);
-        setWeatherData(filteredData);
-      })
-      .catch(console.error);
-  }, []);
 
   useEffect(() => {
     if (!activeModal) return;
@@ -75,46 +73,45 @@ function App() {
     };
   }, [activeModal]);
 
-  useEffect(() => {
-    getweather(coordinates, APIkey)
-      .then((data) => {
-        const filteredData = filterWeatherData(data);
-        setWeatherData(filteredData);
-      })
-      .catch(console.error);
-  }, []);
-
   return (
-    <div className="page">
-      <div className="page__content">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Main weatherData={weatherData} />}></Route>
-          <Route
-            path="/about"
-            element={
-              <AboutUs handleQuoteButtonClick={handleQuoteButtonClick} />
-            }
-          ></Route>
-          <Route
-            path="/window-tint-packages"
-            element={<WindowTintPackages />}
-          ></Route>
-          <Route path="/price-lists" element={<ServicePriceLists />}></Route>
-          <Route path="/ceramic-coatings" element={<CeramicCoatings />}></Route>
-        </Routes>
-        <Footer />
-        {
-          <QuoteModal
-            isOpen={activeModal === "get quote"}
-            activeModal={activeModal}
-            handleCloseClick={closeActiveModal}
-            onQuoteModalSubmit={handleQuoteModalSubmit}
-            handleQuoteButtonClick={handleQuoteButtonClick}
-          />
-        }
+    <CurrentTemperatureUnitContext.Provider value={{ currentTemperatureUnit }}>
+      <div className="page">
+        <div className="page__content">
+          <Header />
+          <Routes>
+            <Route
+              path="/"
+              element={<Main weatherData={weatherData} />}
+            ></Route>
+            <Route
+              path="/about"
+              element={
+                <AboutUs handleQuoteButtonClick={handleQuoteButtonClick} />
+              }
+            ></Route>
+            <Route
+              path="/window-tint-packages"
+              element={<WindowTintPackages />}
+            ></Route>
+            <Route path="/price-lists" element={<ServicePriceLists />}></Route>
+            <Route
+              path="/ceramic-coatings"
+              element={<CeramicCoatings />}
+            ></Route>
+          </Routes>
+          <Footer />
+          {
+            <QuoteModal
+              isOpen={activeModal === "get quote"}
+              activeModal={activeModal}
+              handleCloseClick={closeActiveModal}
+              onQuoteModalSubmit={handleQuoteModalSubmit}
+              handleQuoteButtonClick={handleQuoteButtonClick}
+            />
+          }
+        </div>
       </div>
-    </div>
+    </CurrentTemperatureUnitContext.Provider>
   );
 }
 
