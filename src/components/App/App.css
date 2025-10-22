@@ -7,9 +7,3 @@
   max-width: 1360px;
   margin: 0 auto;
 }
-
-@media screen and (max-width: 600px) {
-  .page__content {
-    padding: 16px 18px;
-  }
-}

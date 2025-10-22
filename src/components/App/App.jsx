@@ -18,12 +18,7 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
 
   const [activeModal, setActiveModal] = useState("");
-  const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState("F");
-
-  //*API toggle switch
-  //const handleToggleSwitchChange = () => {
-  //setCurrentTemperatureUnit(currentTemperatureUnit === "F" ? "C" : "F");
-  //};
+  const [currentTemperatureUnit] = useState("F");
 
   useEffect(() => {
     const lat = 36.7223;
@@ -49,7 +44,7 @@ function App() {
     setActiveModal("");
   };
 
-  const handleQuoteModalSubmit = (e) => {
+  const handleQuoteModalSubmit = () => {
     console.log("quote modal submitted");
     closeActiveModal();
   };

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ServiceCard.css";
 
 function ServiceCard({
@@ -22,12 +23,14 @@ function ServiceCard({
         })}
       </ul>
       <div className="service__card-buttons">
-        <button
-          className="service__card-button service__card-button-price"
-          href={priceLink}
-        >
-          View Price Lists
-        </button>
+        <Link to="/price-lists">
+          <button
+            className="service__card-button service__card-button-price"
+            href={priceLink}
+          >
+            View Price Lists
+          </button>
+        </Link>
         <button
           className="service__card-button service__card-button-quote"
           href={quoteLink}

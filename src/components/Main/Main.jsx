@@ -67,7 +67,7 @@ const archTintItems = [
   },
   {
     id: "7",
-    size: "lg",
+    size: "md",
     src: dualReflectiveInside,
     alt: "15% tops, 25% bottoms Dual Reflective Full Home Tint from the inside",
     caption:

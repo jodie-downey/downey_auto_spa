@@ -1,11 +1,8 @@
-import { useState } from "react";
-
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 import "./QuoteModal.css";
 
 function QuoteModal({
-  isOpen,
   activeModal,
   handleCloseClick,
   onQuoteModalSubmit,
@@ -16,9 +13,7 @@ function QuoteModal({
     onQuoteModalSubmit();
     console.log("submit pressed in modal");
   };
-  //const handleSubmit = (e) => {
-  // e.preventDefault();
-  // onQuoteModalSubmit({insert suubmission params here}) }
+
   return (
     <ModalWithForm
       isOpen={activeModal === "get quote"}

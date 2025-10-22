@@ -1,3 +1,9 @@
+.service__price-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .service__price-list-title {
   color: #fff;
   text-align: center;
@@ -26,6 +32,8 @@
   max-width: 800px;
   margin: 0 auto 2rem;
   color: #cfe8ee;
+  font-family: SairaCondensed bold, sans-serif;
+  font-size: 20px;
 }
 
 .service__price-grid {
@@ -131,5 +139,10 @@
 
   .service__price-grid img {
     max-width: 90%;
+  }
+
+  .service__price-list-description {
+    font-size: 15px;
+    min-width: 250px;
   }
 }

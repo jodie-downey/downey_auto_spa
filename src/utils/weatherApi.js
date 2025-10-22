@@ -41,7 +41,7 @@ export const getWeatherType = (temperature) => {
   }
 };
 
-function getServiceRecommendations({ tempF, condition, isDay }) {
+function getServiceRecommendations({ condition }) {
   let recommendations = [];
 
   if (condition.includes("clear") || condition.includes("sun")) {

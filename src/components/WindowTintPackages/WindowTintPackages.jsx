@@ -50,32 +50,40 @@ function WindowTintPackages() {
     <div className="page">
       <div className="page__content">
         <h2 className="window__tint-title">
-          Take a look at our most popular window tint packages here at Downey
-          Auto Spa
+          Discover Our Premium Window Tint Packages
         </h2>
-        <p className="window__tint-description">
-          Percentages represent Visible Light Transmission (VLT). Essentially,
-          the lower the number, the less visible light coming through your
-          glass. The higher the number, the more visible light coming through
-          your glass.
-        </p>
-        <ul className="window__tint-list-wrapper">
-          Ceramic vs Carbon:
-          <li className="window__tint-list-item">
-            CERAMIC: Significantly improved heat rejection in all VLTs (less
-            heat passing through the glass)
-          </li>
-          <li className="window__tint-list-item">
-            CERAMIC: Enhanced clarity from the inside when looking out{" "}
-          </li>
-          <li className="window__tint-list-item">BOTH: Lifetime Warranty </li>
-          <li className="window__tint-list-item">
-            BOTH: Look the same from the outside
-          </li>
-          <li className="window__tint-list-item">
-            BOTH: Carry a wide range of VLT
-          </li>
-        </ul>
+
+        <div className="window__tint-description-card">
+          <p className="window__tint-description">
+            Percentages represent{" "}
+            <strong>Visible Light Transmission (VLT)</strong>. Essentially, the
+            lower the number, the less visible light coming through your glass.
+            The higher the number, the more visible light coming through your
+            glass.
+          </p>
+        </div>
+
+        <div className="window__comparison-section">
+          <h3 className="window__comparison-title">Ceramic vs Carbon</h3>
+          <div className="window__comparison-grid">
+            <p className="window__comparison-item">
+              Ceramic: Significantly improved heat rejection in all VLTs (less
+              heat passing through the glass)
+            </p>
+            <p className="window__comparison-item">
+              Ceramic: Enhanced clarity from the inside when looking out
+            </p>
+            <p className="window__comparison-item">Both: Lifetime Warranty</p>
+            <p className="window__comparison-item">
+              Both: Look the same from the outside
+            </p>
+            <p className="window__comparison-item">
+              Both: Carry a wide range of VLT options
+            </p>
+          </div>
+        </div>
+
+        <hr className="window__divider" />
 
         <section className="window__tint-grid">
           {tintVideos.map((v) => (

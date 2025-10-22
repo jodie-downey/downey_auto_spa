@@ -45,3 +45,22 @@
     object-fit: contain;
   }
 }
+
+@media (max-width: 600px) {
+  .ceramic__coating-logo {
+    width: 250px;
+    object-fit: contain;
+  }
+
+  .ceramic__coating-title {
+    font-size: 15px;
+  }
+
+  .ceramic__coating-subtitle {
+    font-size: 22px;
+  }
+
+  .ceramic__coating-description {
+    font-size: 12px;
+  }
+}

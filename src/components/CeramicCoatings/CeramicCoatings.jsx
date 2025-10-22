@@ -34,21 +34,21 @@ const ceramicCoatingItems = [
   },
   {
     id: "3",
-    size: "lg",
+    size: "md",
     src: Tractor,
     alt: "Pro+ 6 Year SystemX Ceramic Coating",
     caption: "Pro+ 6 Year SystemX Ceramic Coating on Restored Sod Tractor",
   },
   {
     id: "4",
-    size: "lg",
+    size: "md",
     src: max,
     alt: "Max+ Lifetime SystemX Ceramic Coating",
     caption: "Single Stage Buff pluss Max+ Lifetime SystemX Ceramic Coating",
   },
   {
     id: "5",
-    size: "md",
+    size: "sm",
     src: revive,
     alt: "Revive Black Trim SystemX Ceramic Coating",
     caption:
@@ -56,7 +56,7 @@ const ceramicCoatingItems = [
   },
   {
     id: "6",
-    size: "lg",
+    size: "md",
     src: tankerTrailer,
     alt: "Pro+ 6 Year SystemX Ceramic Coating",
     caption: "Pro+ 6 Year SystemX Ceramic Coating",
@@ -123,7 +123,11 @@ function CeramicCoatings() {
           </p>
         </div>
         <div className="ceramic__coating-upper-logo">
-          <img className="ceramic__coating-logo" src={SystemX} />
+          <img
+            className="ceramic__coating-logo"
+            src={SystemX}
+            alt="SystemX Logo"
+          />
         </div>
       </div>
       <div className="ceramic__coating-grid">

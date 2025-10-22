@@ -1,25 +1,46 @@
+.main__service-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: auto;
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  overflow-x: hidden;
+}
+
 .service__card {
-  height: 100%;
-  width: 300px;
   background-color: #39ecfe;
-  border-radius: 5%;
-  border-top: none;
+  border-radius: 10px;
+  padding: 12px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  padding-bottom: 15px;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  overflow: visible;
 }
 
 .service__card-image {
-  overflow: hidden;
-  border-radius: 10%;
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 .service__card-title {
   text-align: center;
-  margin: 10px 0px;
+  margin: 10px 0;
   color: #1d2b45;
-  font-family: SairaCondensed Bold, sans-serif;
+  font-family: "SairaCondensed Bold", sans-serif;
 }
 
 .service__card-description {
@@ -28,7 +49,8 @@
   margin: 0;
   font-size: 15px;
   color: #1d2b45;
-  font-family: SairaCondensed Medium, sans-serif;
+  font-family: "SairaCondensed Medium", sans-serif;
+  flex-grow: 1;
 }
 
 .service__card-list-item {
@@ -49,11 +71,16 @@
     no-repeat center center;
   background-size: contain;
 }
+
 .service__card-buttons {
   display: flex;
   justify-content: center;
-  gap: 5px;
-  margin-top: auto;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.service__card-button:hover {
+  cursor: pointer;
 }
 
 .service__card-button {
@@ -62,7 +89,19 @@
   text-align: center;
   border-radius: 10%;
   background-color: #1d2b45;
-  height: 115%;
-  width: 115%;
+  padding: 6px 10px;
   font-family: Molle, cursive;
+}
+
+@media screen and (max-width: 500px) {
+  .service__card {
+    max-width: 260px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .service__card-image {
+    max-height: 200px;
+    aspect-ratio: 16 / 9;
+  }
 }
