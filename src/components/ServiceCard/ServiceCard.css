@@ -1,0 +1,107 @@
+.main__service-highlight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: auto;
+  gap: 24px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20px 10px;
+  overflow-x: hidden;
+}
+
+.service__card {
+  background-color: #39ecfe;
+  border-radius: 10px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  overflow: visible;
+}
+
+.service__card-image {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  border-radius: 10px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.service__card-title {
+  text-align: center;
+  margin: 10px 0;
+  color: #1d2b45;
+  font-family: "SairaCondensed Bold", sans-serif;
+}
+
+.service__card-description {
+  list-style: none;
+  padding-left: 5px;
+  margin: 0;
+  font-size: 15px;
+  color: #1d2b45;
+  font-family: "SairaCondensed Medium", sans-serif;
+  flex-grow: 1;
+}
+
+.service__card-list-item {
+  position: relative;
+  padding-left: 22px;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.service__card-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+  background: url("data:image/svg+xml,%3Csvg fill='%231d2b45' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.173 12.727L2.1 8.657l1.414-1.414 2.657 2.657 6.314-6.314 1.414 1.414z'/%3E%3C/svg%3E")
+    no-repeat center center;
+  background-size: contain;
+}
+
+.service__card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.service__card-button:hover {
+  cursor: pointer;
+}
+
+.service__card-button {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 10%;
+  background-color: #1d2b45;
+  padding: 6px 10px;
+  font-family: Molle, cursive;
+}
+
+@media screen and (max-width: 500px) {
+  .service__card {
+    max-width: 260px;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .service__card-image {
+    max-height: 200px;
+    aspect-ratio: 16 / 9;
+  }
+}

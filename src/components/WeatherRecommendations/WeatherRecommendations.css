@@ -1,0 +1,70 @@
+.weather__recommendations {
+  text-align: center;
+  padding: 60px 20px;
+  background: #1d2b45; /* deep blue to match your brand */
+  color: #fff;
+}
+
+.weather__recommendations-title {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #39ecfe; /* accent blue */
+  letter-spacing: 1px;
+}
+
+.weather__recommendations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.weather__recommendations-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(57, 236, 254, 0.3);
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 340px;
+  box-shadow: 0 0 15px rgba(57, 236, 254, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.weather__recommendations-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 25px rgba(57, 236, 254, 0.5);
+}
+
+.weather__recommendations-icon {
+  margin-bottom: 12px;
+}
+
+.weather__recommendations-condition {
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: #fff;
+}
+
+.weather__recommendations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.weather__recommendations-list li {
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #fff;
+  background: rgba(57, 236, 254, 0.1);
+  border-radius: 8px;
+  padding: 8px;
+  margin: 6px 0;
+  transition: background 0.3s ease;
+}
+
+.weather__recommendations-list li:hover {
+  background: rgba(57, 236, 254, 0.25);
+}

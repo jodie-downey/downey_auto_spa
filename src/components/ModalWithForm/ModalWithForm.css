@@ -1,0 +1,153 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s ease, opacity 0.3s ease;
+  z-index: 1000;
+}
+
+.modal_opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Content Container */
+.modal__content {
+  background-color: #1d2b45;
+  color: #fff;
+  position: relative;
+  padding: 32px 28px 40px;
+  max-width: 496px;
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid rgba(57, 236, 254, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  box-sizing: border-box;
+}
+
+/* Close Button */
+.modal__close-button {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  color: #39ecfe;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.modal__close-button:hover {
+  transform: scale(1.1);
+}
+
+/* Title */
+.modal__title {
+  margin: 0 0 8px;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #39ecfe;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+/* Form Structure */
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Labels */
+.modal__label {
+  margin: 20px 0 0;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #39ecfe;
+}
+
+.modal__label-text-box {
+  border-bottom: 1px solid rgba(57, 236, 254, 0.4);
+}
+
+/* Input Fields */
+.modal__input {
+  display: block;
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-family: "Molle", cursive;
+  font-size: 16px;
+  padding: 8px 0;
+  margin-top: 4px;
+  outline: none;
+}
+
+.modal__input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Button Container */
+.modal__button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* Submit Button */
+.modal__submit {
+  background-color: #39ecfe;
+  border: none;
+  color: #1d2b45;
+  font-family: "Saira Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal__submit:hover {
+  background-color: #2ccbe3;
+}
+
+/* Footer Buttons (optional) */
+.modal__toggle-button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.modal__toggle-button:hover {
+  color: #39ecfe;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 600px) {
+  .modal__content {
+    max-width: 375px;
+    padding: 24px;
+  }
+
+  .modal__title {
+    font-size: 18px;
+  }
+
+  .modal__submit {
+    width: 100%;
+  }
+}
