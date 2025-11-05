@@ -10,8 +10,17 @@ function QuoteModal({
 }) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    onQuoteModalSubmit();
-    console.log("submit pressed in modal");
+
+    const formData = {
+      name: document.getElementById("quote-name").value,
+      vehicleYear: document.getElementById("quote-year").value,
+      vehicleMakeModel: document.getElementById("quote-vehicle-make").value,
+      requestedPackage: document.getElementById("quote-package").value,
+      email: document.getElementById("quote-email").value,
+      phone: document.getElementById("quote-phone").value,
+    };
+
+    onQuoteModalSubmit(formData);
   };
 
   return (
@@ -34,6 +43,33 @@ function QuoteModal({
           className="modal__input"
           id="quote-name"
           placeholder="Name"
+          required
+        />
+      </label>
+      <label
+        htmlFor="quote-email"
+        className="modal__label modal__label-text-box"
+      >
+        Email{" "}
+        <input
+          type="email"
+          className="modal__input"
+          id="quote-email"
+          placeholder="Enter your email"
+          required
+        />
+      </label>
+
+      <label
+        htmlFor="quote-phone"
+        className="modal__label modal__label-text-box"
+      >
+        Phone{" "}
+        <input
+          type="tel"
+          className="modal__input"
+          id="quote-phone"
+          placeholder="Enter your phone number"
           required
         />
       </label>
