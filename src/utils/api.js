@@ -2,4 +2,23 @@ function checkResponse(res) {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
 }
 
-export { checkResponse };
+const submitQuoteRequest = async (quoteData) => {
+  try {
+    const response = await fetch("http://localhost:4000/api/quotes/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(quoteData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to submit quote");
+    }
+
+    return await response.json();
+  } catch (error) {
+    console.error("Error submitting quote:", error);
+    throw error;
+  }
+};
+
+export { checkResponse, submitQuoteRequest };

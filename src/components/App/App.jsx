@@ -13,6 +13,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
+import { submitQuoteRequest } from "../../utils/api";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -44,13 +45,16 @@ function App() {
     setActiveModal("");
   };
 
-  const handleQuoteModalSubmit = () => {
-    console.log("quote modal submitted");
+  const handleQuoteModalSubmit = async (formData) => {
+    try {
+      const response = await submitQuoteRequest(formData);
+      console.log("Quote submitted successfully:", response);
+      alert("Your quote request was sent successfully!");
+    } catch (err) {
+      alert("There was a problem sending your quote. Please try again.");
+    }
     closeActiveModal();
   };
-  //const handleQuoteModalSubmit = ({})=>{
-  //APICALL({}).then((data) => {handle data here ; closeActiveModal();})
-  //.catch((error) => {console.error(insert proper error message)})}
 
   useEffect(() => {
     if (!activeModal) return;
