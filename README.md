@@ -62,6 +62,13 @@ Condition Recommended Services
 
 Each condition maps to actual services displayed dynamically in the WeatherRecommendations component.
 
+## Photos
+[api weather requested services](./src/assets/README/api-recommended-weather.png)
+[responsive design for optimal user experience](./src//assets/README/responsive_design.png)
+[grid layout for customer comparison](./src/assets/README/grid-layout.png)
+[focused modal for price lists](./src/assets/README/price_list-modal.png)
+[custom quote modal](./src/assets/README/custom_quote-modal.png)
+
 ## Future Iterations
 
 Form submission with backend notifications (email or API)
