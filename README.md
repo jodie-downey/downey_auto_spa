@@ -47,7 +47,7 @@ Icons: Lucide-React
 
 ### Live Project
 
-[View Live Site](https://jodie-downey.github.io/downey_auto_spa/)
+[View Live Site](https://downeyautospa.com/)
 
 ## ## Weather-Based Service Logic
 
@@ -63,6 +63,7 @@ Condition Recommended Services
 Each condition maps to actual services displayed dynamically in the WeatherRecommendations component.
 
 ## Photos
+
 [api weather requested services](./src/assets/README/api-recommended-weather.png)
 [responsive design for optimal user experience](./src//assets/README/responsive_design.png)
 [grid layout for customer comparison](./src/assets/README/grid-layout.png)
