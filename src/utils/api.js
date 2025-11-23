@@ -5,7 +5,7 @@ function checkResponse(res) {
 const submitQuoteRequest = async (quoteData) => {
   try {
     const response = await fetch(
-      "https://downey-auto-spa-server.onrender.com/api/quotes/submit",
+      "https://downey-auto-spa-server.onrender.com/api/submit",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
