@@ -1,4 +1,4 @@
-import "../TermsOfService/TermsofService.css";
+import "../TermsOfService/TermsOfService.css";
 
 function PrivacyPolicy() {
   return (
