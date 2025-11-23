@@ -1,4 +1,4 @@
-import "./socialLinks.css";
+import "./SocialLinks.css";
 
 import {
   siFacebook,

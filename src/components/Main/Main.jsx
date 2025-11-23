@@ -1,4 +1,4 @@
-import "./main.css";
+import "./Main.css";
 import "../TintGallery/TintGallery";
 
 import proImage from "../../assets/proplus.webp";
