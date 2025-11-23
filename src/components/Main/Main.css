@@ -18,7 +18,6 @@
   z-index: 0;
   filter: brightness(0.55);
   pointer-events: none;
-  z-index: 1;
 }
 
 .main__hero-content {
