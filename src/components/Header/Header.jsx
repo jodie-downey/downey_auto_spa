@@ -77,6 +77,10 @@ function Header() {
       {/* Mobile Navigation */}
       {menuOpen && (
         <nav className="header__nav-mobile">
+          <Link to="/" onClick={closeMenu}>
+            {" "}
+            Home
+          </Link>
           <Link to="/window-tint-packages" onClick={closeMenu}>
             Window Tint Packages
           </Link>
