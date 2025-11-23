@@ -87,7 +87,7 @@ function Header() {
             Service Price List
           </Link>
           <Link to="/services" onClick={closeMenu}>
-            About Us
+            Services
           </Link>
         </nav>
       )}
