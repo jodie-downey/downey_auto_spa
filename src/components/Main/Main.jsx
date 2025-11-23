@@ -117,7 +117,7 @@ function Main({ weatherData }) {
     <main className="main">
       <div className="main__hero">
         <video className="main__hero-video" autoPlay muted loop playsInline>
-          <source src="/hero_clips.mp4" type="video/mp4" />
+          <source src="/videos/hero_clips.mp4" type="video/mp4" />
         </video>
 
         <div className="main__hero-content">
