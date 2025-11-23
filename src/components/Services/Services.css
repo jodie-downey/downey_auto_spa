@@ -1,0 +1,39 @@
+.services__container {
+  max-width: 1200px;
+  margin: 0 auto; /* centers the content */
+  padding: 0 1.5rem; /* prevents edge hugging on small screens */
+}
+.services__title {
+  font-size: 30px; /* ~36px */
+  font-weight: 700; /* strong but not bulky */
+  line-height: 1.2;
+  margin-bottom: 0.75rem; /* space under title */
+  color: #ffffff; /* matches your dark premium theme */
+  text-align: center;
+}
+
+.services__subtitle {
+  font-size: 1.125rem; /* ~18px, ideal for intro paragraphs */
+  font-weight: 400;
+  line-height: 1.6; /* comfortable reading */
+  max-width: 100%; /* perfect line length for readability */
+  color: #d8d8d8; /* softer contrast than pure white */
+  margin-bottom: 2rem; /* space above your service cards */
+  text-align: center;
+}
+
+.services-service-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  row-gap: 2rem;
+  column-gap: 2rem;
+  padding: 0;
+  align-items: stretch;
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  .services-service-list {
+    justify-items: center;
+  }
+}

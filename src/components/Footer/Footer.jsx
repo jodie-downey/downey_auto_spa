@@ -1,7 +1,7 @@
+import { Link } from "react-router-dom";
 import { Phone, MapPin, Mail } from "lucide-react";
 import "./Footer.css";
 import logo from "../../assets/downey_auto_spa_logo.svg";
-
 import SocialLinks from "../SocialLinks/SocialLinks";
 
 function Footer() {
@@ -10,7 +10,9 @@ function Footer() {
       <div className="footer__top">
         <div className="footer__logo-section">
           <img src={logo} alt="Downey Auto Spa Logo" className="footer__logo" />
-          <p className="footer__tagline">Precision • Protection • Perfection</p>
+          <h1 className="footer__tagline">
+            Precision • Protection • Perfection
+          </h1>
         </div>
 
         <div className="footer__contact">
@@ -39,6 +41,15 @@ function Footer() {
       </div>
 
       <hr className="footer__divider" />
+
+      <div className="footer__legal">
+        <Link to="/terms-of-service" className="footer__legal-link">
+          Terms of Service
+        </Link>
+        <Link to="/privacy-policy" className="footer__legal-link">
+          Privacy Policy
+        </Link>
+      </div>
 
       <div className="footer__bottom">
         <p>

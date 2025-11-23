@@ -23,6 +23,12 @@
   max-width: 400px;
   height: auto;
   overflow: visible;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.service__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 .service__card-image {
@@ -41,6 +47,11 @@
   margin: 10px 0;
   color: #1d2b45;
   font-family: "SairaCondensed Bold", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.3px;
 }
 
 .service__card-description {
@@ -51,6 +62,7 @@
   color: #1d2b45;
   font-family: "SairaCondensed Medium", sans-serif;
   flex-grow: 1;
+  padding: 1rem 1.25rem;
 }
 
 .service__card-list-item {

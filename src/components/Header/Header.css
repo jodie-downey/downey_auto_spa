@@ -145,7 +145,7 @@
   cursor: pointer;
 }
 
-.header__about-us {
+.header__services {
   color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -153,7 +153,7 @@
   font-size: 19px;
 }
 
-.header__about-us:hover {
+.header__services:hover {
   text-decoration: underline;
   color: #39ecfe;
   cursor: pointer;

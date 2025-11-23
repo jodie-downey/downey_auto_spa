@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Main from "../Main/Main";
-import AboutUs from "../AboutUs/AboutUs";
+import Services from "../Services/Services";
 import WindowTintPackages from "../WindowTintPackages/WindowTintPackages";
 import ServicePriceLists from "../ServicePriceLists/ServicePriceLists";
 import CeramicCoatings from "../CeramicCoatings/CeramicCoatings";
@@ -11,6 +11,8 @@ import CurrentTemperatureUnitContext from "../../contexts/CurrentTempetureContex
 import "./App.css";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import TermsOfService from "../TermsOfService/TermsOfService";
+import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
 
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { submitQuoteRequest } from "../../utils/api";
@@ -83,9 +85,9 @@ function App() {
               element={<Main weatherData={weatherData} />}
             ></Route>
             <Route
-              path="/about"
+              path="/services"
               element={
-                <AboutUs handleQuoteButtonClick={handleQuoteButtonClick} />
+                <Services handleQuoteButtonClick={handleQuoteButtonClick} />
               }
             ></Route>
             <Route
@@ -97,6 +99,8 @@ function App() {
               path="/ceramic-coatings"
               element={<CeramicCoatings />}
             ></Route>
+            <Route path="/terms-of-service" element={<TermsOfService />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           </Routes>
           <Footer />
           {

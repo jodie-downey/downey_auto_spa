@@ -69,8 +69,8 @@ function Header() {
         <Link to="/price-lists">
           <p className="header__price-lists">Service Price List</p>
         </Link>
-        <Link to="/about">
-          <p className="header__about-us">About Us</p>
+        <Link to="/services">
+          <p className="header__services">Services</p>
         </Link>
       </nav>
 
@@ -86,7 +86,7 @@ function Header() {
           <Link to="/price-lists" onClick={closeMenu}>
             Service Price List
           </Link>
-          <Link to="/about" onClick={closeMenu}>
+          <Link to="/services" onClick={closeMenu}>
             About Us
           </Link>
         </nav>

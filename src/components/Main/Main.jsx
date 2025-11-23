@@ -20,6 +20,7 @@ import partialHome from "../../assets/partialhome.webp";
 import TintGallery from "../TintGallery/TintGallery";
 import WeatherRecommendations from "../WeatherRecommendations/WeatherRecommendations";
 import Preloader from "../Preloader/Preloader";
+import LiveReviews from "../Reviews/LiveReviews";
 
 const archTintItems = [
   {
@@ -114,17 +115,27 @@ const archTintItems = [
 function Main({ weatherData }) {
   return (
     <main className="main">
-      <div className="main__upper">
-        <h1 className="main__upper-title">WELCOME!</h1>
-        <p className="main__upper-description">
-          Discover Unmatched Excellence in Professional Detailing & Window
-          Tinting
-        </p>
-        <p className="main__upper-description">
-          South Central KY’s leading experts in ceramic coatings, window tinting
-          and paint correction
-        </p>
+      <div className="main__hero">
+        <video className="main__hero-video" autoPlay muted loop playsInline>
+          <source
+            src="/downey_auto_spa/videos/hero_clips.mp4"
+            type="video/mp4"
+          />
+        </video>
+
+        <div className="main__hero-content">
+          <h1 className="main__hero-title">
+            Discover Unmatched Excellence in Professional Detailing & Window
+            Tinting
+          </h1>
+
+          <p className="main__hero-subtitle">
+            South Central KY’s leading experts in ceramic coatings, window
+            tinting, and paint correction
+          </p>
+        </div>
       </div>
+      <LiveReviews />
       <div className="main__service-highlight">
         <div className="main__service-wrapper">
           <img
