@@ -20,7 +20,7 @@ function Header() {
           </a>
           <a
             className="header__address"
-            href="https://www.google.com/maps/place/Downey+Auto+Spa"
+            href="https://www.google.com/maps/place/?q=place_id:ChIJ2WhtOE-5ZYgRJDJLH_jFRfI"
             target="_blank"
             rel="noopener noreferrer"
           >
