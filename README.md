@@ -1,88 +1,118 @@
-# Downey Auto Spa — Full-Stack MVP
+# 🚗 Downey Auto Spa — Full-Stack Business Website
 
-Overview
+A fully custom, production-grade web application built for Downey Auto Spa, a vehicle detailing and window tinting business in Southern Kentucky.  
+This project replaces an outdated third-party provider site with a fast, modern, mobile-first platform designed to streamline customer quotes, display real reviews, and deliver dynamic, weather-informed recommendations.
 
-Downey Auto Spa is a professional automotive and architectural detailing web application built to modernize client interaction, streamline service presentation, and demonstrate real API integration.
-This MVP reflects the complete front-end architecture, reusable component design, and live weather-based recommendations tailored for clients in Franklin, KY and surrounding areas.
+---
 
-## Core Features
+## 🌐 Live Site
 
-✅ Reusable Components
-Built with modular, scalable React components such as ServiceCard, ModalWithForm, and VideoCard, ensuring maintainability and flexibility for future API integrations.
+**https://www.downeyautospa.com**
 
-✅ Dynamic Weather Integration (OpenWeather API)
-Fetches live local weather conditions and filters them through a custom logic function to provide relevant service recommendations.
-Example: “Clear skies with high UV? — Recommend Nanoflex Tint + Max G+ Ceramic Coating.”
+---
 
-✅ Custom Modal System
-Reused across multiple form types, styled with the brand’s accent color (#39ecfe).
-Includes keyboard accessibility, click-outside close handling, and a reusable form layout (ModalWithForm).
+## 📸 Screenshots
 
-✅ Service Catalog Grid
-A visually dynamic, responsive grid layout featuring all detailing, tinting, and ceramic coating packages.
-Supports internal routing for deep-linking to pricing and quote request pages.
+### **Home Page**
 
-✅ Preloader Component (MVP)
-Branded loading animation while fetching live weather data, built for future expansion into global async events like form submissions.
+![Home Page](./src/assets/README/desktop_homepage.png)
 
-## Design & Branding
+![Home Page Mobile](./src/assets/README/mobile_homepage.png)
 
-Color Palette: Deep navy background #1d2b45 + Electric blue accent #39ecfe
+### **Weather Based Service Recommendations**
 
-Typography: Saira Condensed (bold/medium), Molle (accent headings)
+![Services](./src/assets/README/weather_recs_api.png)
 
-Visual Theme: Clean, professional, modern with high-contrast legibility
+### **Quote Form**
 
-Icons: Lucide-React for lightweight, consistent line icons
+![Quote Form](./src/assets/README/custom_quote-modal.png)
 
-## Tech Stack
+### **Reviews API**
 
-Frontend: React (Vite)
+![Reviews](./src/assets/README/reviews_api.png)
 
-Styling: CSS3 (BEM methodology)
+## 🚀 Features
 
-API Integration: OpenWeather API
+### ⭐ **Customer-Facing**
 
-Icons: Lucide-React
+- Lightning-fast **mobile-first UI**
+- Fully responsive hero with optimized MP4 video
+- Live **Google Reviews** pulled via Places API
+- Weather-based recommendations (OpenWeather API)
+- One-click navigation to business location (Google Maps)
+- Clean, modern design with custom CSS
 
-### Live Project
+### ⭐ **Business-Facing**
 
-[View Live Site](https://downeyautospa.com/)
+- Real-time **quote request submissions**
+- Automated branded email notifications powered by **Resend**
+- Secure backend with:
+  - Input validation (Zod)
+  - Rate limiting
+  - Custom error handling
+  - Hardened CORS configuration
+- Full domain/DNS configuration + SSL
 
-## ## Weather-Based Service Logic
+---
 
-Implemented inside filterWeatherData() and getServiceRecommendations().
+## 🛠️ Tech Stack
 
-Condition Recommended Services
-☀️ Clear & Hot Nanoflex Tint, Max G+ Coating
-🌧️ Rain Glass+ Coating, Terraflex Tint
-❄️ Snow Pro+ Coating, Glass+ Coating
-🌫️ Mist/Fog Glass+ Coating, Terraflex Tint
-☁️ Mild/Overcast Pro+ Coating, Panaflex Tint
+### **Frontend**
 
-Each condition maps to actual services displayed dynamically in the WeatherRecommendations component.
+- React
+- Vite
+- Custom CSS (no UI frameworks)
+- Hero video optimization (preloading + web-optimized encoding)
 
-## Photos
+### **Backend**
 
-[api weather requested services](./src/assets/README/api-recommended-weather.png)
-[responsive design for optimal user experience](./src//assets/README/responsive_design.png)
-[grid layout for customer comparison](./src/assets/README/grid-layout.png)
-[focused modal for price lists](./src/assets/README/price_list-modal.png)
-[custom quote modal](./src/assets/README/custom_quote-modal.png)
+- Node.js
+- Express
+- MongoDB & Mongoose
+- Zod validation
+- Nodemailer → Resend migration
+- Custom Express error middleware
 
-## Future Iterations
+### **APIs**
 
-Form submission with backend notifications (email or API)
+- Google Places API (reviews)
+- OpenWeather API
+- Resend Email API
 
-Global preloader during quote submissions
+### **Infrastructure**
 
-Day/night adaptive header accents
+- Render (frontend + backend hosting)
+- GitHub Actions
+- Environment variables
+- Domain + DNS (GoDaddy → managed independently)
+- SSL & HTTPS enforced
 
-API-based customer reviews integration
+---
 
-Expanded data-driven recommendations using UV, IR, and humidity values
+## 📬 Quote Request Flow
 
-## Author
+1. User submits the quote form
+2. Input is validated with **Zod**
+3. Data saved to MongoDB
+4. Business receives an **instant** branded email notification
+5. UI displays success message
 
+Robust, simple, and production-ready.
+
+---
+
+## 🔒 Security & Reliability
+
+- Strict CORS whitelist (production + localhost)
+- Rate limiting to prevent spam
+- Sanitized & validated request bodies
+- Error middleware with clean JSON responses
+- No client secrets exposed
+- HTTPS enforced with valid certificate
+
+---
+
+👩‍💻 About the Developer
 Jodie Downey
-Owner/Operator of Downey Auto Spa • Software Engineering Student, TripleTen
+Full-Stack Developer • Entrepreneur • Co-Owner of Downey Auto Spa
+Building scalable, production-ready web applications with clean UI, real-world business logic, and modern tooling.
