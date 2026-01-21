@@ -5,7 +5,7 @@
   overflow: hidden;
   border-bottom-left-radius: 12px;
   border-bottom-right-radius: 12px;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .main__hero-video {
@@ -47,6 +47,53 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
 }
 
+.main__hero-cta-wrapper {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: auto;
+}
+
+.main__hero-cta {
+  font-family: "SairaCondensed SemiBold", sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  padding: 0.85rem 2.4rem;
+  border-radius: 999px;
+
+  color: #0e1a2b; /* deep navy */
+  background: linear-gradient(135deg, #39ecfe, #6fffd2);
+
+  border: none;
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 24px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+}
+
+.main__hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 32px rgba(0, 0, 0, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  filter: brightness(1.05);
+}
+
+.main__hero-cta:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
 .weather-section {
   background-color: #1d2b45;
   padding: 40px 0;
@@ -85,12 +132,16 @@
 .main__service-title {
   color: #fff;
   text-align: center;
-  font-family: SairaCondensed Bold, sans-serif;
+  font-family:
+    SairaCondensed Bold,
+    sans-serif;
   font-size: 24px;
 }
 
 .main__service-description {
-  font-family: SairaCondensed Bold, sans-serif;
+  font-family:
+    SairaCondensed Bold,
+    sans-serif;
   font-size: 19px;
   color: #fff;
   margin: 20px 5px 10px 5px;
@@ -98,7 +149,9 @@
 
 .main__tint-gallery {
   background-color: rgb(57, 236, 254, 0.7);
-  font-family: SairaCondensed Bold, sans-serif;
+  font-family:
+    SairaCondensed Bold,
+    sans-serif;
   font-size: 25px;
   padding: 10px;
 }
@@ -126,10 +179,18 @@
   .main__upper-title {
     font-size: 16px;
   }
+  .main__hero {
+    height: 75vh;
+  }
 
   .main__upper-description {
     font-size: 14px;
     margin-top: 0;
+  }
+
+  .main__hero-cta {
+    font-size: 1rem;
+    padding: 0.75rem 2rem;
   }
 }
 

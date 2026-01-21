@@ -112,7 +112,7 @@ const archTintItems = [
   },
 ];
 
-function Main({ weatherData }) {
+function Main({ weatherData, handleQuoteButtonClick }) {
   return (
     <main className="main">
       <div className="main__hero">
@@ -130,6 +130,14 @@ function Main({ weatherData }) {
             South Central KY’s leading experts in ceramic coatings, window
             tinting, and paint correction
           </p>
+        </div>
+        <div className="main__hero-cta-wrapper">
+          <button
+            className="main__hero-cta"
+            onClick={() => handleQuoteButtonClick("hero")}
+          >
+            Get My Custom Quote
+          </button>
         </div>
       </div>
       <LiveReviews />

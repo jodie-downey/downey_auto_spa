@@ -1,4 +1,6 @@
+import { useEffect, useRef } from "react";
 import "./WeatherRecommendations.css";
+import { observeSectionOnce } from "../../utils/trackSectionApi.js";
 import { Sun, CloudRain, Snowflake, Cloud, Wind } from "lucide-react";
 
 function WeatherRecommendations({ weatherData }) {
@@ -14,8 +16,14 @@ function WeatherRecommendations({ weatherData }) {
     wind: <Wind size={36} color="#39ecfe" />,
   };
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    return observeSectionOnce(ref.current, "weather_recommendations");
+  }, []);
+
   return (
-    <section className="weather__recommendations">
+    <section className="weather__recommendations" ref={ref}>
       <h2 className="weather__recommendations-title">
         Recommended for Today’s Weather
       </h2>

@@ -28,7 +28,7 @@ function Services({ handleQuoteButtonClick }) {
               title={service.title}
               description={service.description}
               image={service.image}
-              onQuoteButtonClick={handleQuoteButtonClick}
+              onQuoteButtonClick={() => handleQuoteButtonClick("service_page")}
             />
           );
         })}

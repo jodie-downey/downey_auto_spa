@@ -1,9 +1,18 @@
+import { useEffect, useRef } from "react";
 import "./TintGallery.css";
+import { observeSectionOnce } from "../../utils/trackSectionApi.js";
 
 function TintGallery({ items = [] }) {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    return observeSectionOnce(ref.current, "architectural_tint_gallery");
+  }, []);
+
   return (
     <section
       className="tint__gallery"
+      ref={ref}
       aria-label="Architectural window tint gallery"
     >
       {items.map((item) => (

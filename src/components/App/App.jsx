@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Main from "../Main/Main";
@@ -16,12 +16,19 @@ import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
 
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { submitQuoteRequest } from "../../utils/api";
+import { track } from "../../utils/trackApi";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
 
   const [activeModal, setActiveModal] = useState("");
   const [currentTemperatureUnit] = useState("F");
+
+  const location = useLocation();
+
+  useEffect(() => {
+    track("page_view");
+  }, [location.pathname]);
 
   useEffect(() => {
     const lat = 36.7223;
@@ -39,7 +46,8 @@ function App() {
       });
   }, []);
 
-  const handleQuoteButtonClick = () => {
+  const handleQuoteButtonClick = (source, meta = {}) => {
+    track("quote_open", { source, ...meta });
     setActiveModal("get quote");
   };
 
@@ -82,7 +90,12 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={<Main weatherData={weatherData} />}
+              element={
+                <Main
+                  weatherData={weatherData}
+                  handleQuoteButtonClick={handleQuoteButtonClick}
+                />
+              }
             ></Route>
             <Route
               path="/services"

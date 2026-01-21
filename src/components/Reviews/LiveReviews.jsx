@@ -1,6 +1,7 @@
 import "./LiveReviews.css";
 import { Star } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { observeSectionOnce } from "../../utils/trackSectionApi.js";
 
 function LiveReviews() {
   const [reviews, setReviews] = useState([]);
@@ -20,6 +21,12 @@ function LiveReviews() {
       .finally(() => setLoading(false));
   }, []);
 
+  const ref = useRef(null);
+
+  useEffect(() => {
+    return observeSectionOnce(ref.current, "live_reviews");
+  }, []);
+
   if (loading) {
     return (
       <section className="reviews">
@@ -30,7 +37,7 @@ function LiveReviews() {
   }
 
   return (
-    <section className="reviews">
+    <section className="reviews" ref={ref}>
       <h2 className="reviews__title">What Our Clients Are Saying</h2>
 
       {rating && totalReviews && (
