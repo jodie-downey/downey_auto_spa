@@ -1,3 +1,4 @@
+import { useState } from "react";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 import "./QuoteModal.css";
@@ -8,6 +9,7 @@ function QuoteModal({
   onQuoteModalSubmit,
   handleQuoteButtonClick,
 }) {
+  const [timeframe, setTimeframe] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -18,6 +20,7 @@ function QuoteModal({
       requestedPackage: document.getElementById("quote-package").value,
       email: document.getElementById("quote-email").value,
       phone: document.getElementById("quote-phone").value,
+      ...(timeframe ? { timeframe } : {}),
     };
 
     onQuoteModalSubmit(formData);
@@ -112,6 +115,71 @@ function QuoteModal({
           required
         />
       </label>
+      <fieldset className="modal__radio-buttons">
+        <legend className="modal__label">
+          When would you like to schedule? (optional)
+        </legend>
+        <label
+          htmlFor="quote-timeframe"
+          className="modal__label modal__label-radio"
+        >
+          <input
+            id="timeframe-asap"
+            type="radio"
+            className="modal__radio-input"
+            name="timeframe-filter"
+            value="asap"
+            checked={timeframe === "asap"}
+            onChange={(e) => setTimeframe(e.target.value)}
+          />
+          Needed it done last week
+        </label>
+        <label
+          htmlFor="quote-timeframe"
+          className="modal__label modal__label-radio"
+        >
+          <input
+            id="timeframe-soon"
+            type="radio"
+            className="modal__radio-input"
+            name="timeframe-filter"
+            value="week"
+            checked={timeframe === "week"}
+            onChange={(e) => setTimeframe(e.target.value)}
+          />
+          Within a Week or Two
+        </label>
+        <label
+          htmlFor="quote-timeframe"
+          className="modal__label modal__label-radio"
+        >
+          <input
+            id="timeframe-flexible"
+            type="radio"
+            className="modal__radio-input"
+            name="timeframe-filter"
+            value="month"
+            checked={timeframe === "month"}
+            onChange={(e) => setTimeframe(e.target.value)}
+          />
+          Within a Month or Two
+        </label>
+        <label
+          htmlFor="quote-timeframe"
+          className="modal__label modal__label-radio"
+        >
+          <input
+            id="timeframe-priceshopping"
+            type="radio"
+            className="modal__radio-input"
+            name="timeframe-filter"
+            value="unknown"
+            checked={timeframe === "unknown"}
+            onChange={(e) => setTimeframe(e.target.value)}
+          />
+          Im price shopping for now
+        </label>
+      </fieldset>
     </ModalWithForm>
   );
 }
