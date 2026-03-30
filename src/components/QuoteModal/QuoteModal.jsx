@@ -3,27 +3,42 @@ import ModalWithForm from "../ModalWithForm/ModalWithForm";
 
 import "./QuoteModal.css";
 
+const initialForm = {
+  name: "",
+  email: "",
+  phone: "",
+  vehicleYear: "",
+  vehicleMakeModel: "",
+  requestedPackage: "",
+  timeframe: "",
+};
+
 function QuoteModal({
   activeModal,
   handleCloseClick,
   onQuoteModalSubmit,
   handleQuoteButtonClick,
 }) {
-  const [timeframe, setTimeframe] = useState("");
+  const [form, setForm] = useState(initialForm);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
     const formData = {
-      name: document.getElementById("quote-name").value,
-      vehicleYear: document.getElementById("quote-year").value,
-      vehicleMakeModel: document.getElementById("quote-vehicle-make").value,
-      requestedPackage: document.getElementById("quote-package").value,
-      email: document.getElementById("quote-email").value,
-      phone: document.getElementById("quote-phone").value,
-      ...(timeframe ? { timeframe } : {}),
+      name: form.name,
+      vehicleYear: form.vehicleYear,
+      vehicleMakeModel: form.vehicleMakeModel,
+      requestedPackage: form.requestedPackage,
+      email: form.email,
+      phone: form.phone,
+      ...(form.timeframe ? { timeframe: form.timeframe } : {}),
     };
-
     onQuoteModalSubmit(formData);
+    setForm(initialForm);
   };
 
   return (
@@ -42,10 +57,13 @@ function QuoteModal({
       >
         Name{""}
         <input
-          type="string"
+          type="text"
           className="modal__input"
           id="quote-name"
+          name="name"
           placeholder="Name"
+          value={form.name}
+          onChange={handleChange}
           required
         />
       </label>
@@ -58,7 +76,10 @@ function QuoteModal({
           type="email"
           className="modal__input"
           id="quote-email"
+          name="email"
           placeholder="Enter your email"
+          value={form.email}
+          onChange={handleChange}
           required
         />
       </label>
@@ -72,7 +93,10 @@ function QuoteModal({
           type="tel"
           className="modal__input"
           id="quote-phone"
+          name="phone"
           placeholder="Enter your phone number"
+          value={form.phone}
+          onChange={handleChange}
           required
         />
       </label>
@@ -82,10 +106,13 @@ function QuoteModal({
       >
         Vehicle Year{""}
         <input
-          type="string"
+          type="text"
           className="modal__input"
           id="quote-year"
+          name="vehicleYear"
           placeholder="Vehicle Year"
+          value={form.vehicleYear}
+          onChange={handleChange}
           required
         />
       </label>
@@ -95,10 +122,13 @@ function QuoteModal({
       >
         Vehicle Make and Model{""}
         <input
-          type="string"
+          type="text"
           className="modal__input"
           id="quote-vehicle-make"
+          name="vehicleMakeModel"
           placeholder="Vehicle Make and model"
+          value={form.vehicleMakeModel}
+          onChange={handleChange}
           required
         />
       </label>
@@ -108,10 +138,13 @@ function QuoteModal({
       >
         Describe what your looking to have done!{""}
         <input
-          type="string"
+          type="text"
           className="modal__input"
           id="quote-package"
+          name="requestedPackage"
           placeholder="Insert awesome details here"
+          value={form.requestedPackage}
+          onChange={handleChange}
           required
         />
       </label>
@@ -120,62 +153,62 @@ function QuoteModal({
           When would you like to schedule? (optional)
         </legend>
         <label
-          htmlFor="quote-timeframe"
+          htmlFor="timeframe-asap"
           className="modal__label modal__label-radio"
         >
           <input
             id="timeframe-asap"
             type="radio"
             className="modal__radio-input"
-            name="timeframe-filter"
+            name="timeframe"
             value="asap"
-            checked={timeframe === "asap"}
-            onChange={(e) => setTimeframe(e.target.value)}
+            checked={form.timeframe === "asap"}
+            onChange={handleChange}
           />
           Needed it done last week
         </label>
         <label
-          htmlFor="quote-timeframe"
+          htmlFor="timeframe-soon"
           className="modal__label modal__label-radio"
         >
           <input
             id="timeframe-soon"
             type="radio"
             className="modal__radio-input"
-            name="timeframe-filter"
+            name="timeframe"
             value="week"
-            checked={timeframe === "week"}
-            onChange={(e) => setTimeframe(e.target.value)}
+            checked={form.timeframe === "week"}
+            onChange={handleChange}
           />
           Within a Week or Two
         </label>
         <label
-          htmlFor="quote-timeframe"
+          htmlFor="timeframe-flexible"
           className="modal__label modal__label-radio"
         >
           <input
             id="timeframe-flexible"
             type="radio"
             className="modal__radio-input"
-            name="timeframe-filter"
+            name="timeframe"
             value="month"
-            checked={timeframe === "month"}
-            onChange={(e) => setTimeframe(e.target.value)}
+            checked={form.timeframe === "month"}
+            onChange={handleChange}
           />
           Within a Month or Two
         </label>
         <label
-          htmlFor="quote-timeframe"
+          htmlFor="timeframe-priceshopping"
           className="modal__label modal__label-radio"
         >
           <input
             id="timeframe-priceshopping"
             type="radio"
             className="modal__radio-input"
-            name="timeframe-filter"
+            name="timeframe"
             value="unknown"
-            checked={timeframe === "unknown"}
-            onChange={(e) => setTimeframe(e.target.value)}
+            checked={form.timeframe === "unknown"}
+            onChange={handleChange}
           />
           Im price shopping for now
         </label>

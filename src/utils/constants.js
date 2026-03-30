@@ -66,3 +66,6 @@ export const coordinates = {
 };
 
 export const APIkey = import.meta.env.VITE_OPENWEATHER_KEY;
+
+export const API_BASE =
+  import.meta.env.VITE_API_BASE || "http://localhost:4000";

@@ -1,8 +1,6 @@
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:4000";
+import { API_BASE } from "./constants.js";
 
 const SESSION_KEY = "das_session_id";
-
-console.log("API_BASE (dev):", API_BASE);
 
 function getSessionId() {
   let id = localStorage.getItem(SESSION_KEY);
@@ -15,7 +13,6 @@ function getSessionId() {
 }
 
 export function track(type, meta = {}) {
-  console.log("TRACK:", type, meta, `${API_BASE}/api/events`);
   try {
     const payload = {
       type,
