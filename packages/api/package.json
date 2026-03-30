@@ -1,0 +1,39 @@
+{
+  "name": "@das/api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "vitest run",
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "type": "module",
+  "dependencies": {
+    "@das/shared": "*",
+    "axios": "^1.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0",
+    "jodiedowney-errors": "^1.0.0",
+    "mongodb": "^6.20.0",
+    "mongoose": "^8.19.2",
+    "morgan": "^1.10.1",
+    "resend": "^6.5.2",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "mongodb-memory-server": "^11.0.1",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.2.2",
+    "vitest": "^4.1.2"
+  },
+  "mongodbMemoryServer": {
+    "version": "6.0.14"
+  }
+}

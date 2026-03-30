@@ -1,0 +1,13 @@
+{
+  "name": "@das/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "src/quoteSchema.js",
+  "exports": {
+    ".": "./src/quoteSchema.js"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  }
+}
