@@ -6,6 +6,8 @@ import Services from "../Services/Services";
 import WindowTintPackages from "../WindowTintPackages/WindowTintPackages";
 import ServicePriceLists from "../ServicePriceLists/ServicePriceLists";
 import CeramicCoatings from "../CeramicCoatings/CeramicCoatings";
+import WindowTinting from "../WindowTinting/WindowTinting";
+import ArchitecturalTinting from "../ArchitecturalTinting/ArchitecturalTinting";
 import QuoteModal from "../QuoteModal/QuoteModal";
 import CurrentTemperatureUnitContext from "../../contexts/CurrentTempetureContext";
 import "./App.css";
@@ -110,7 +112,23 @@ function App() {
             <Route path="/price-lists" element={<ServicePriceLists />}></Route>
             <Route
               path="/ceramic-coatings"
-              element={<CeramicCoatings />}
+              element={
+                <CeramicCoatings
+                  handleQuoteButtonClick={handleQuoteButtonClick}
+                />
+              }
+            ></Route>
+            <Route
+              path="/window-tinting"
+              element={
+                <WindowTinting
+                  handleQuoteButtonClick={handleQuoteButtonClick}
+                />
+              }
+            ></Route>
+            <Route
+              path="/window-tinting/architectural"
+              element={<ArchitecturalTinting />}
             ></Route>
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />

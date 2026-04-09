@@ -1,0 +1,81 @@
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.photo-gallery__item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #0f1a2e;
+  border: 1px solid rgba(57, 236, 254, 0.25);
+}
+
+.photo-gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-gallery__caption {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  margin: 0;
+  padding: 6px 10px;
+  background: rgba(29, 43, 69, 0.8);
+  border-radius: 6px;
+  color: #fff;
+  font-family: var(--ff-display, "SairaCondensed", sans-serif);
+  font-size: 15px;
+}
+
+/* Row A / Row C — lg is 8 cols (16:9), sm is 4 cols (8:9 = same row height) */
+.photo-gallery__item--lg {
+  grid-column: span 8;
+  aspect-ratio: 16 / 9;
+}
+.photo-gallery__item--sm {
+  grid-column: span 4;
+  aspect-ratio: 8 / 9;
+}
+
+/* Row B — three equal tiles, 4 cols each at 4:3 */
+.photo-gallery__item--md {
+  grid-column: span 4;
+  aspect-ratio: 4 / 3;
+}
+
+/* Optional full-width banner finale */
+.photo-gallery__item--xl {
+  grid-column: span 12;
+  aspect-ratio: 21 / 9;
+}
+
+.photo-gallery__item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media screen and (max-width: 800px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .photo-gallery__item--lg,
+  .photo-gallery__item--sm,
+  .photo-gallery__item--md,
+  .photo-gallery__item--xl {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .photo-gallery {
+    grid-template-columns: 1fr;
+  }
+}

@@ -15,7 +15,8 @@ function LiveReviews() {
       .then((data) => {
         setRating(data.rating);
         setTotalReviews(data.totalReviews);
-        setReviews(data.reviews);
+        const shuffled = [...(data.reviews || [])].sort(() => Math.random() - 0.5);
+        setReviews(shuffled);
       })
       .catch((err) => console.error("Review fetch error:", err))
       .finally(() => setLoading(false));
@@ -58,14 +59,16 @@ function LiveReviews() {
             <p className="review-card__text">"{review.text}"</p>
             <p className="review-card__name">— {review.author_name}</p>
 
-            <a
-              className="review-card__link"
-              href={review.author_url}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View on Google →
-            </a>
+            {review.author_url && (
+              <a
+                className="review-card__link"
+                href={review.author_url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                View on Google →
+              </a>
+            )}
           </div>
         ))}
       </div>

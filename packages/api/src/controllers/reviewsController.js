@@ -1,24 +1,38 @@
 import axios from "axios";
 
-export const getReviews = async (req, res) => {
+export const getReviews = async (_req, res) => {
   try {
     const placeId = process.env.GOOGLE_PLACE_ID;
     const apiKey = process.env.GOOGLE_API_KEY;
 
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${placeId}&fields=name,rating,reviews,user_ratings_total&key=${apiKey}`;
+    const url = `https://places.googleapis.com/v1/places/${placeId}`;
 
-    const response = await axios.get(url);
+    const response = await axios.get(url, {
+      headers: {
+        "X-Goog-Api-Key": apiKey,
+        "X-Goog-FieldMask": "displayName,rating,userRatingCount,reviews",
+      },
+    });
 
-    console.log("GOOGLE RAW RESPONSE:", response.data);
-    if (!response.data.result) {
+    const place = response.data;
+
+    if (!place) {
       return res.status(500).json({ message: "Failed to load reviews" });
     }
 
+    const reviews = (place.reviews || []).map((review) => ({
+      author_name: review.authorAttribution?.displayName || "Anonymous",
+      author_url: review.authorAttribution?.uri || null,
+      rating: review.rating,
+      text: review.text?.text || "",
+      time: review.publishTime,
+    }));
+
     res.json({
-      name: response.data.result.name,
-      rating: response.data.result.rating,
-      totalReviews: response.data.result.user_ratings_total,
-      reviews: response.data.result.reviews || [],
+      name: place.displayName?.text,
+      rating: place.rating,
+      totalReviews: place.userRatingCount,
+      reviews,
     });
   } catch (error) {
     console.error("Google Reviews Error:", error);

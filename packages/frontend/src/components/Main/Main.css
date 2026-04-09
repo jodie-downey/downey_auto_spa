@@ -147,6 +147,21 @@
   margin: 20px 5px 10px 5px;
 }
 
+.main__service-link {
+  display: inline-block;
+  margin: 8px 5px 0;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: #39ecfe;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.main__service-link:hover {
+  opacity: 0.75;
+}
+
 .main__tint-gallery {
   background-color: rgb(57, 236, 254, 0.7);
   font-family:

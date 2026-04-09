@@ -1,116 +1,15 @@
+import { Link } from "react-router-dom";
 import "./Main.css";
-import "../TintGallery/TintGallery";
 
 import proImage from "../../assets/proplus.webp";
 import traverse from "../../assets/traverse.webp";
 import customerPhoto from "../../assets/customerfocused.webp";
-import axisSide from "../../assets/axisside.webp";
-import garageDoor from "../../assets/garagedoor.webp";
-import blackHome from "../../assets/blackhome.webp";
-import ceramicHomeDark from "../../assets/ceramichomedark.webp";
-import dualReflectiveFull from "../../assets/dualreflectivefull.webp";
-import blueDoor from "../../assets/bluedoor.webp";
-import dualReflectiveInside from "../../assets/dualreflectiveinside.webp";
-import dualReflectiveOutside from "../../assets/dualreflectiveoutside.webp";
-import frostedMultiple from "../../assets/frostedmultiple.webp";
-import frostedInside from "../../assets/frostinterior.webp";
-import silverReflective from "../../assets/spinestopfull.webp";
-import partialHome from "../../assets/partialhome.webp";
 
-import TintGallery from "../TintGallery/TintGallery";
+import PhotoGallery from "../PhotoGallery/PhotoGallery";
+import homeGalleryItems from "./homeGalleryData";
 import WeatherRecommendations from "../WeatherRecommendations/WeatherRecommendations";
 import Preloader from "../Preloader/Preloader";
 import LiveReviews from "../Reviews/LiveReviews";
-
-const archTintItems = [
-  {
-    id: "1",
-    size: "md",
-    src: axisSide,
-    alt: "Ceramic architectural tint",
-    caption: "50% Ceramic Non-Mirrored Heat Reduction Tint",
-  },
-  {
-    id: "2",
-    size: "md",
-    src: garageDoor,
-    alt: "Sputtered Architectural tint",
-    caption: "20% Sputtered Mirrored Heat and Glare Reduction tint",
-  },
-  {
-    id: "3",
-    size: "sm",
-    src: ceramicHomeDark,
-    alt: "Ceramic architectural tint",
-    caption: "15% Ceramic Non-Mirrored Heat Reduction Tint",
-  },
-  {
-    id: "4",
-    size: "sm",
-    src: dualReflectiveFull,
-    alt: "15% Dual Reflective Full Home Tint",
-    caption: "15% Dual Reflective Mirrored Heat and Glare Reduction Tint",
-  },
-  {
-    id: "5",
-    size: "md",
-    src: dualReflectiveOutside,
-    alt: "15% tops, 25% bottoms Dual Reflective Full Home Tint",
-    caption:
-      "15% tops, 25% bottoms Dual Reflective Mirrored Heat and Glare Reduction Tint",
-  },
-  {
-    id: "6",
-    size: "md",
-    src: blueDoor,
-    alt: "15% Dual Reflective on door",
-    caption: "15% Dual Reflective Mirrored Heat and Glare Reduction Tint",
-  },
-  {
-    id: "7",
-    size: "md",
-    src: dualReflectiveInside,
-    alt: "15% tops, 25% bottoms Dual Reflective Full Home Tint from the inside",
-    caption:
-      "15% tops, 25% bottoms Dual Reflective Mirrored Heat and Glare Reduction Tint from the inside",
-  },
-  {
-    id: "8",
-    size: "md",
-    src: frostedMultiple,
-    alt: "White Frosted Day and Night Privacy tint",
-    caption: "White Frosted Day and Night Privacy tint from the inside",
-  },
-  {
-    id: "9",
-    size: "sm",
-    src: blackHome,
-    alt: "Ceramic architectural tint",
-    caption: "5% Ceramic Non-Mirrored Heat Reduction Tint",
-  },
-  {
-    id: "10",
-    size: "sm",
-    src: frostedInside,
-    alt: "White Frosted Day and Night Privacy tint",
-    caption: "White Frosted Day and Night Privacy tint from the inside",
-  },
-  {
-    id: "11",
-    size: "sm",
-    src: silverReflective,
-    alt: "5% Industrial Highly Reflective OneWay Mirrored Daytime Privacy and Heat rejction tint",
-    caption:
-      "5% Industrial Highly Reflective OneWay Mirrored Daytime Privacy and Heat rejction tint",
-  },
-  {
-    id: "12",
-    size: "sm",
-    src: partialHome,
-    alt: "15% Dual Reflective Mirrored Heat and Glare Reduction Tint",
-    caption: "15% Dual Reflective Mirrored Heat and Glare Reduction Tint",
-  },
-];
 
 function Main({ weatherData, handleQuoteButtonClick }) {
   return (
@@ -146,17 +45,19 @@ function Main({ weatherData, handleQuoteButtonClick }) {
           <img
             className="main__service-image"
             src={proImage}
-            alt="service image"
+            alt="SystemX Pro+ Ceramic Coating"
           />
-          <h2 className="main__service-title">Ceramic Coatings</h2>
+          <h2 className="main__service-title">
+            Ceramic Coating by Certified SystemX Installers
+          </h2>
           <p className="main__service-description">
-            At Downey Auto Spa, we specialize in SystemX ceramic coating to
-            provide your vehicle with a durable, high-gloss finish that resists
-            scratches, UV rays, and environmental contaminants. Our
-            comprehensive paint correction services address imperfections such
-            as scratches, swirl marks, and oxidation, restoring your vehicle’s
-            paint to its original brilliance.{" "}
+            Stop waxing. Start protecting. SystemX ceramic coating bonds to your
+            paint at a molecular level — delivering years of protection,
+            effortless cleaning, and a gloss that wax can’t replicate.
           </p>
+          <Link to="/ceramic-coatings" className="main__service-link">
+            See Packages →
+          </Link>
         </div>
         <div className="main__service-wrapper">
           <img
@@ -200,9 +101,9 @@ function Main({ weatherData, handleQuoteButtonClick }) {
       </section>
       <div className="main__tint-gallery">
         <h3 className="main__tint-gallery-title">
-          SAVE MONEY ON ENERGY SAVINGS AND TRANSFORM YOUR HOME OR OFFICE
+          CERAMIC COATING AND WINDOW TINTING SERVICE SPOTLIGHT
         </h3>
-        <TintGallery items={archTintItems} />
+        <PhotoGallery items={homeGalleryItems} sectionName="home_gallery" />
       </div>
     </main>
   );

@@ -101,6 +101,11 @@
   justify-content: center;
 }
 
+.header__lower-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .header__number {
   color: #fff;
   text-decoration: none;
@@ -165,7 +170,7 @@
 
 .header__window-tint {
   color: #fff;
-  text-decoration: #fff;
+  text-decoration: none;
   transition: color 0.3s ease;
   font-family: SairaCondensed Medium, sans-serif;
   font-size: 19px;

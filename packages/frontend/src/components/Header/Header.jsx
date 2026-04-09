@@ -60,11 +60,14 @@ function Header() {
 
       {/* Desktop Navigation */}
       <nav className="header__lower-container">
-        <Link to="/window-tint-packages">
-          <p className="header__window-tint">Window Tint Packages</p>
-        </Link>
         <Link to="/ceramic-coatings">
           <p className="header__ceramic-coatings">Ceramic Coatings</p>
+        </Link>
+        <Link to="/window-tinting">
+          <p className="header__window-tint">Vehicle Window Tinting</p>
+        </Link>
+        <Link to="/window-tinting/architectural">
+          <p className="header__window-tint">Home and Office Tint</p>
         </Link>
         <Link to="/price-lists">
           <p className="header__price-lists">Service Price List</p>
@@ -81,8 +84,11 @@ function Header() {
             {" "}
             Home
           </Link>
-          <Link to="/window-tint-packages" onClick={closeMenu}>
-            Window Tint Packages
+          <Link to="/window-tinting" onClick={closeMenu}>
+            Vehicle Window Tinting
+          </Link>
+          <Link to="/window-tinting/architectural" onClick={closeMenu}>
+            Home and Office Tint
           </Link>
           <Link to="/ceramic-coatings" onClick={closeMenu}>
             Ceramic Coatings
