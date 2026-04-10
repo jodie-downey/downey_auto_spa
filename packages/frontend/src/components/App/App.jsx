@@ -33,6 +33,14 @@ function App() {
   }, [location.pathname]);
 
   useEffect(() => {
+    const ping = () =>
+      fetch(`${import.meta.env.VITE_API_BASE}/health`).catch(() => {});
+    ping();
+    const interval = setInterval(ping, 14 * 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
     const lat = 36.7223;
     const lon = -86.5772;
     const APIkey = import.meta.env.VITE_OPENWEATHER_KEY;

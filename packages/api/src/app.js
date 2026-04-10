@@ -26,6 +26,8 @@ app.use(
 );
 app.use(express.json());
 
+app.get("/health", (req, res) => res.sendStatus(200));
+
 app.use("/api", quoteRouter);
 app.use("/api/reviews", reviewsRouter);
 app.use("/api", eventRouter);

@@ -10,7 +10,7 @@ function LiveReviews() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("https://downey-auto-spa-server.onrender.com/api/reviews")
+    fetch(`${import.meta.env.VITE_API_BASE}/api/reviews`)
       .then((res) => res.json())
       .then((data) => {
         setRating(data.rating);
