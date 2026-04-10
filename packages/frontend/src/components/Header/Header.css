@@ -18,8 +18,10 @@
   color: #39ecfe;
   cursor: pointer;
   display: none;
-  position: relative;
-  z-index: 2000;
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 1000000;
 }
 
 .header__nav-mobile {
