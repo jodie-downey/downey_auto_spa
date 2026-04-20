@@ -4,7 +4,9 @@ function TintLaws() {
   return (
     <div className="terms">
       <h1 className="terms__title">Kentucky Window Tint Laws</h1>
-      <p className="terms__subtitle">Reference Guide — Updated After 2024 KY Legislation</p>
+      <p className="terms__subtitle">
+        Reference Guide — Updated After 2024 KY Legislation
+      </p>
 
       <section className="terms__section">
         <h2 className="terms__subtitle">1. Understanding VLT</h2>
@@ -25,9 +27,7 @@ function TintLaws() {
       </section>
 
       <section className="terms__section">
-        <h2 className="terms__subtitle">
-          2. Kentucky Legal VLT Requirements
-        </h2>
+        <h2 className="terms__subtitle">2. Kentucky Legal VLT Requirements</h2>
         <ul className="terms__list">
           <li className="terms__list-item">
             <strong>Front Driver Side Window</strong>
@@ -83,9 +83,8 @@ function TintLaws() {
           </li>
           <li className="terms__list-item">
             If that's your situation, we'll have an honest conversation about
-            it. We'll walk you through exactly what you're choosing, have you
-            sign our Kentucky Tint Law waiver, and make sure you understand the
-            tradeoffs before we touch your vehicle.
+            it. We'll walk you through exactly what you're choosing, and make
+            sure you understand the tradeoffs before we touch your vehicle.
           </li>
           <li className="terms__list-item">
             We don't judge the choice. We just make sure you make it informed.
@@ -94,7 +93,7 @@ function TintLaws() {
             Going darker than legal limits may result in a fix-it ticket,
             required removal of the film, or a fine. Downey Auto Spa is not
             responsible for citations or legal consequences related to customer
-            choices made after signing the waiver.
+            choices.
           </li>
         </ul>
       </section>
