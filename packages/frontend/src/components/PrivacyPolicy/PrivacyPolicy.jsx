@@ -4,7 +4,7 @@ function PrivacyPolicy() {
   return (
     <div className="terms">
       <h1 className="terms__title">Privacy Policy</h1>
-      <p className="terms__subtitle">Last Updated: November 2025</p>
+      <p className="terms__subtitle">Last Updated: April 2026</p>
 
       <section className="terms__section">
         <h2 className="terms__subtitle">1. Introduction</h2>
@@ -20,7 +20,10 @@ function PrivacyPolicy() {
                 contact us by phone, email, or social media
               </li>
               <li className="terms__sublist-item">
-                book an appointment or receive services
+                schedule an appointment online or in person
+              </li>
+              <li className="terms__sublist-item">
+                receive services at our facility
               </li>
             </ul>
           </li>
@@ -71,6 +74,40 @@ function PrivacyPolicy() {
               </li>
             </ul>
           </li>
+
+          <li className="terms__list-item">
+            <strong>2.4 SMS & Text Messaging</strong>
+            <ul className="terms__sublist">
+              <li className="terms__sublist-item">
+                Downey Auto Spa collects mobile phone numbers solely for the
+                purpose of sending appointment-related text messages to customers
+                who have explicitly opted in during the booking process.
+              </li>
+              <li className="terms__sublist-item">
+                Messages may include appointment confirmations, deposit
+                reminders, payment receipts, appointment reminders, vehicle
+                ready notices, and post-appointment follow-up messages.
+              </li>
+              <li className="terms__sublist-item">
+                We do not sell, share, or disclose mobile phone numbers to third
+                parties for marketing purposes.
+              </li>
+              <li className="terms__sublist-item">
+                Message frequency varies based on appointment activity. Message
+                and data rates may apply.
+              </li>
+              <li className="terms__sublist-item">
+                Consent to receive text messages is not required as a condition
+                of purchasing any service.
+              </li>
+              <li className="terms__sublist-item">
+                Reply <strong>STOP</strong> at any time to unsubscribe. Reply{" "}
+                <strong>HELP</strong> for help. For support contact us at{" "}
+                <strong>270-776-3914</strong> or{" "}
+                <strong>jodie@downeyautospa.com</strong>.
+              </li>
+            </ul>
+          </li>
         </ul>
       </section>
 
@@ -89,6 +126,10 @@ function PrivacyPolicy() {
           </li>
           <li className="terms__list-item">
             To send service confirmations or updates
+          </li>
+          <li className="terms__list-item">
+            To send appointment-related text messages to customers who have
+            opted in
           </li>
           <li className="terms__list-item">
             To improve our website, customer experience, and service offerings
@@ -112,7 +153,10 @@ function PrivacyPolicy() {
             <ul className="terms__sublist">
               <li className="terms__sublist-item">
                 We may share information with companies that help us operate our
-                business (e.g., email services, hosting providers).
+                business, including scheduling platforms, SMS delivery services,
+                payment processors, and hosting providers. These parties are
+                permitted to use your information only to perform services on
+                our behalf.
               </li>
             </ul>
           </li>

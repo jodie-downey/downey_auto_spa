@@ -44,14 +44,6 @@ const filmCards = [
   },
 ];
 
-const lawRows = [
-  { window: "Front driver side", vlt: "35% minimum" },
-  { window: "Front passenger side", vlt: "35% minimum" },
-  { window: "Rear side windows", vlt: "18% minimum" },
-  { window: "Rear window", vlt: "18% minimum" },
-  { window: "Full windshield", vlt: "70% or lighter (recently updated)" },
-  { window: "Windshield sun strip", vlt: "Non-reflective, above AS-1 line" },
-];
 
 const faqs = [
   {
@@ -275,55 +267,15 @@ function WindowTinting({ handleQuoteButtonClick }) {
             Know the law before you tint.
           </h2>
           <p className="window-tint__body-text">
-            We believe an informed customer makes the best customer. Here's
-            exactly what Kentucky law requires — no guessing, no surprises.
+            Kentucky sets minimum VLT (Visible Light Transmission) requirements
+            for each window position — and the rules were recently updated for
+            full windshields. We've put together a full breakdown covering legal
+            limits, what happens if you want to go darker, and what Tennessee
+            customers need to know.
           </p>
-          <p className="window-tint__body-text window-tint__body-text--note">
-            VLT = Visual Light Transmission. The lower the percentage, the
-            darker the tint. A 5% tint lets in very little light. A 70% tint is
-            nearly clear.
-          </p>
-          <table className="window-tint__law-table">
-            <thead>
-              <tr>
-                <th>Window</th>
-                <th>Legal Minimum VLT (Kentucky)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {lawRows.map((row) => (
-                <tr key={row.window}>
-                  <td>{row.window}</td>
-                  <td>{row.vlt}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-
-          <div className="window-tint__law-callout">
-            <p className="window-tint__law-callout-heading">
-              Want to go darker than legal limits?
-            </p>
-            <p className="window-tint__body-text" style={{ marginBottom: 0 }}>
-              Some customers choose to go darker than Kentucky's legal minimums
-              — for privacy, aesthetics, medical light sensitivity, or personal
-              preference. If that's you, we'll have an honest conversation about
-              it. We'll walk you through exactly what you're choosing, have you
-              sign our Kentucky Tint Law waiver, and make sure you understand
-              the tradeoffs before we touch your vehicle. We don't judge the
-              choice. We just make sure you make it informed.{" "}
-              <a className="window-tint__inline-link" href="/tint-laws">
-                View Full KY Tint Law Page →
-              </a>
-            </p>
-          </div>
-
-          <p className="window-tint__body-text" style={{ marginTop: 32 }}>
-            <strong>Important if you drive into Tennessee:</strong> Tennessee
-            has its own tint laws. If you're a Middle TN customer coming to us
-            in Franklin, you're responsible for compliance in your home state.
-            We'll walk you through both if that applies to you.
-          </p>
+          <a className="window-tint__cta-btn window-tint__cta-btn--secondary" href="/tint-laws">
+            View Kentucky Tint Law Guide →
+          </a>
         </div>
       </section>
 

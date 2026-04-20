@@ -4,7 +4,7 @@ function TermsOfService() {
   return (
     <div className="terms">
       <h1 className="terms__title">Terms of Service</h1>
-      <p className="terms__subtitle">Last Updated: November 2025</p>
+      <p className="terms__subtitle">Last Updated: April 2026</p>
 
       <section className="terms__section">
         <h2 className="terms__subtitle">1. Definitions</h2>
@@ -38,11 +38,13 @@ function TermsOfService() {
             <strong>2.1 Deposits</strong>
             <ul className="terms__sublist">
               <li className="terms__sublist-item">
-                Appointments requiring coatings, tint, or specialty products may
-                require a deposit.
+                Online bookings through our scheduling app require a 50%
+                deposit at the time of booking. In-person bookings are handled
+                on a case-by-case basis.
               </li>
               <li className="terms__sublist-item">
-                Deposits are non-refundable but may be transferred with proper
+                Deposits are non-refundable but may be transferred to a
+                rescheduled appointment with at least 24 hours of advance
                 notice.
               </li>
             </ul>
@@ -52,7 +54,8 @@ function TermsOfService() {
             <strong>2.2 Rescheduling</strong>
             <ul className="terms__sublist">
               <li className="terms__sublist-item">
-                24 hours of notice is required to reschedule without penalty.
+                At least 24 hours of notice is required to reschedule without
+                penalty.
               </li>
             </ul>
           </li>
@@ -61,11 +64,12 @@ function TermsOfService() {
             <strong>2.3 Cancellations & No-Shows</strong>
             <ul className="terms__sublist">
               <li className="terms__sublist-item">
-                Cancellations under 24 hours may forfeit the deposit.
+                Cancellations made within 24 hours of the appointment will
+                forfeit the deposit.
               </li>
               <li className="terms__sublist-item">
-                No-shows automatically forfeit the deposit and may require
-                prepayment for future bookings.
+                No-shows automatically forfeit the deposit and will require
+                prepayment in full for future bookings.
               </li>
             </ul>
           </li>
@@ -211,7 +215,7 @@ function TermsOfService() {
             <strong>7.2 Aftercare</strong>
             <ul className="terms__sublist">
               <li className="terms__sublist-item">
-                Windows must remain up for at least 3 days; avoid ammonia
+                Windows must remain up for at least 2 days; avoid ammonia
                 cleaners.
               </li>
             </ul>
@@ -261,7 +265,8 @@ function TermsOfService() {
         <ul className="terms__list">
           <li className="terms__list-item">
             We may photograph or record your vehicle for portfolio or marketing
-            use unless you request otherwise before service.
+            use, including posting to our website and social media, unless you
+            request otherwise before service begins.
           </li>
         </ul>
       </section>
@@ -271,7 +276,8 @@ function TermsOfService() {
         <ul className="terms__list">
           <li className="terms__list-item">
             Payment is due upon completion unless otherwise agreed in writing.
-            Fraudulent chargebacks will be pursued.
+            Disputed charges made in bad faith will be contested and may result
+            in collection action.
           </li>
         </ul>
       </section>
@@ -293,6 +299,13 @@ function TermsOfService() {
           <li className="terms__list-item">
             By booking, paying a deposit, leaving your vehicle, or approving
             service, the Client agrees to these Terms of Service.
+          </li>
+          <li className="terms__list-item">
+            By booking online and providing a mobile phone number, the Client
+            consents to receive appointment-related text messages as described
+            in our{" "}
+            <a href="/privacy-policy">Privacy Policy</a>. Consent is not
+            required as a condition of service.
           </li>
         </ul>
       </section>

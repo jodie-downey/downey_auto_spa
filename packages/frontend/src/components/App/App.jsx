@@ -15,6 +15,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import TermsOfService from "../TermsOfService/TermsOfService";
 import PrivacyPolicy from "../PrivacyPolicy/PrivacyPolicy";
+import TintLaws from "../TintLaws/TintLaws";
 
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { submitQuoteRequest } from "../../utils/api";
@@ -140,6 +141,7 @@ function App() {
             ></Route>
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/tint-laws" element={<TintLaws />} />
           </Routes>
           <Footer />
           {
