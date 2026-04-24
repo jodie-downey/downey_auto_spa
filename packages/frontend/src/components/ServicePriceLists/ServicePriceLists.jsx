@@ -4,8 +4,8 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
 import ceramicCoatings from "../../assets/ceramicpricelist.webp";
 import detailingList from "../../assets/detailingPriceList.webp";
-import carbonPrices from "../../assets/carbonPrices.webp";
-import ceramicTintPrices from "../../assets/ceramicTintPrices.webp";
+import carbonPrices from "../../assets/carbonwindowtint.png";
+import ceramicTintPrices from "../../assets/ceramicwindowtint.png";
 
 function ServicePriceLists() {
   const images = [
