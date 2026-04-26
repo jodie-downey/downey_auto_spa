@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Phone, MapPin, Mail, Menu, X } from "lucide-react";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import AnnouncementBanner from "../AnnouncementBanner/AnnouncementBanner";
 import "./Header.css";
 import Logo from "../../assets/downey_auto_spa_logo.svg";
 
@@ -12,6 +13,7 @@ function Header() {
 
   return (
     <header className="header">
+      <AnnouncementBanner />
       <div className="header__upper-container">
         <div className="header__link-container">
           <a className="header__number" href="tel:+12707763914">

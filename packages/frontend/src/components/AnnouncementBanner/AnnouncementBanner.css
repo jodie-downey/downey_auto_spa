@@ -1,0 +1,27 @@
+.announcement-banner {
+  background: #39ecfe;
+  color: #1d2b45;
+  font-family: 'Saira Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  height: 32px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.announcement-banner__track {
+  display: inline-flex;
+  gap: 0;
+  animation: marquee 28s linear infinite;
+}
+
+.announcement-banner__track span {
+  padding-right: 80px;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

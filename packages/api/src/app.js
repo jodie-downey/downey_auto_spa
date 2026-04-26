@@ -4,6 +4,7 @@ import cors from "cors";
 import quoteRouter from "./routes/quotes.js";
 import reviewsRouter from "./routes/reviews.js";
 import eventRouter from "./routes/events.js";
+import chatRouter from "./routes/chat.js";
 
 const allowedOrigins = [
   "https://downeyautospa.com",
@@ -31,6 +32,7 @@ app.get("/health", (req, res) => res.sendStatus(200));
 app.use("/api", quoteRouter);
 app.use("/api/reviews", reviewsRouter);
 app.use("/api", eventRouter);
+app.use("/api", chatRouter);
 app.use(errorHandler);
 
 export default app;

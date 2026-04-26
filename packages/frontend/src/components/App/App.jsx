@@ -20,6 +20,7 @@ import TintLaws from "../TintLaws/TintLaws";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { submitQuoteRequest } from "../../utils/api";
 import { track } from "../../utils/trackApi";
+import DowneyChat from "../DowneyChat/DowneyChat";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -153,6 +154,7 @@ function App() {
               handleQuoteButtonClick={handleQuoteButtonClick}
             />
           }
+          <DowneyChat />
         </div>
       </div>
     </CurrentTemperatureUnitContext.Provider>
