@@ -247,6 +247,7 @@
 
   .header__hamburger {
     display: block;
+    top: 40px;
   }
 
   .header__upper-container {

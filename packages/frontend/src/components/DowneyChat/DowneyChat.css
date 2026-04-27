@@ -45,9 +45,10 @@
 
 @media (max-width: 480px) {
   .downey-chat-window {
-    width: calc(100vw - 16px);
-    height: 75vh;
+    left: 8px;
     right: 8px;
+    width: auto;
+    height: 75vh;
     bottom: 8px;
   }
 }
