@@ -1,3 +1,5 @@
+import helmet from "helmet";
+import rateLimit from "express-rate-limit";
 import errorHandler from "./middleware/errorHandler.js";
 import express from "express";
 import cors from "cors";
@@ -14,6 +16,11 @@ const allowedOrigins = [
 ];
 
 const app = express();
+
+app.use(helmet({
+  hsts: { maxAge: 31536000, includeSubDomains: true, preload: true },
+}));
+
 app.use(
   cors({
     origin: function (origin, callback) {
@@ -25,10 +32,20 @@ app.use(
     },
   })
 );
-app.use(express.json());
+
+const globalLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 100,
+  standardHeaders: true,
+  legacyHeaders: false,
+  message: { error: "Too many requests. Please try again later." },
+});
+
+app.use(express.json({ limit: "50kb" }));
 
 app.get("/health", (req, res) => res.sendStatus(200));
 
+app.use("/api", globalLimiter);
 app.use("/api", quoteRouter);
 app.use("/api/reviews", reviewsRouter);
 app.use("/api", eventRouter);
