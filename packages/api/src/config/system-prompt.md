@@ -258,13 +258,6 @@ PANAFLEX (ceramic, architectural-grade, traditional tint look)
 - >99% UV blocking
 - Best for: customers who want both heat rejection and visible privacy/shade.
 
-NANOFLEX (premium ceramic)
-- Up to 98% IR rejection — the top of the line
-- Multiple ceramic layers, advanced nanotechnology
-- >99% UV blocking
-- Best for: high-exposure glass, sunrooms, glass walls, anywhere heat is the
-  primary issue and maximum rejection is the goal.
-
 DECORATIVE FILMS
 - Frosted, patterned, gradient, and custom-print films
 - Use cases: conference room privacy, bathroom and shower glass, storefront
