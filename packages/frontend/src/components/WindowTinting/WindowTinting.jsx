@@ -260,6 +260,28 @@ function WindowTinting({ handleQuoteButtonClick }) {
         </div>
       </section>
 
+      {/* SECTION 3.5 — CARBON VS CERAMIC WALKTHROUGH VIDEO */}
+      <section className="window-tint__section window-tint__section--dark">
+        <div className="window-tint__container window-tint__container--center">
+          <h2 className="window-tint__section-heading">
+            Carbon vs. Ceramic: See the difference yourself.
+          </h2>
+          <p className="window-tint__body-text" style={{ maxWidth: "680px" }}>
+            Watch our side-by-side vehicle walkarounds comparing Carbon Terraflex and Ceramic Panaflex — same darkness level, different film. You&apos;ll see exactly how the two look on real vehicles in real conditions before you decide.
+          </p>
+          <div className="window-tint__video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/Urin6CfGue8?si=Bnc301gYl3LpOPPz"
+              title="Carbon vs Ceramic Window Tint Comparison"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
       {/* SECTION 4 — KNOW THE LAW */}
       <section className="window-tint__section window-tint__section--dark">
         <div className="window-tint__container">

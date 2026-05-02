@@ -319,6 +319,23 @@
   margin-top: 16px;
 }
 
+.window-tint__video-embed {
+  position: relative;
+  width: 100%;
+  max-width: 720px;
+  margin: 32px auto 0;
+  aspect-ratio: 16 / 9;
+}
+
+.window-tint__video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
 /* ── LAW TABLE ────────────────────────────────────── */
 
 .window-tint__law-table {
