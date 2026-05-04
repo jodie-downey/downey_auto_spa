@@ -33,7 +33,7 @@ function Main({ weatherData, handleQuoteButtonClick }) {
         <div className="main__hero-cta-wrapper">
           <a
             className="main__hero-cta"
-            href="https://www.book.downeyautospa.com"
+            href="https://book.downeyautospa.com/downey-auto-spa"
             target="_blank"
             rel="noopener noreferrer"
           >

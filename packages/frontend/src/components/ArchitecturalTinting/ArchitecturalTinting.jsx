@@ -249,7 +249,7 @@ function ArchitecturalTinting() {
             </a>
             <a
               className="arch-tint__cta-btn"
-              href="https://www.book.downeyautospa.com"
+              href="https://book.downeyautospa.com/downey-auto-spa"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -487,7 +487,7 @@ function ArchitecturalTinting() {
             </a>
             <a
               className="arch-tint__cta-btn"
-              href="https://www.book.downeyautospa.com"
+              href="https://book.downeyautospa.com/downey-auto-spa"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -572,7 +572,7 @@ function ArchitecturalTinting() {
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
             <a
               className="arch-tint__cta-btn arch-tint__cta-btn--large"
-              href="https://www.book.downeyautospa.com"
+              href="https://book.downeyautospa.com/downey-auto-spa"
               target="_blank"
               rel="noopener noreferrer"
             >

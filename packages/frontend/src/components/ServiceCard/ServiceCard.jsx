@@ -25,7 +25,7 @@ function ServiceCard({
       <div className="service__card-buttons">
         <a
           className="service__card-button service__card-button-book"
-          href="https://www.book.downeyautospa.com"
+          href="https://book.downeyautospa.com/downey-auto-spa"
           target="_blank"
           rel="noopener noreferrer"
         >

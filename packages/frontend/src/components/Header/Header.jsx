@@ -79,7 +79,7 @@ function Header() {
         </Link>
         <a
           className="header__book-now"
-          href="https://www.book.downeyautospa.com"
+          href="https://book.downeyautospa.com/downey-auto-spa"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -111,7 +111,7 @@ function Header() {
           </Link>
           <a
             className="header__nav-mobile-book-now"
-            href="https://www.book.downeyautospa.com"
+            href="https://book.downeyautospa.com/downey-auto-spa"
             target="_blank"
             rel="noopener noreferrer"
             onClick={closeMenu}

@@ -128,7 +128,7 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
             </a>
             <a
               className="ceramic__cta-btn"
-              href="https://www.book.downeyautospa.com"
+              href="https://book.downeyautospa.com/downey-auto-spa"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -274,7 +274,7 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "auto" }}>
                 <a
                   className="ceramic__cta-btn ceramic__cta-btn--card"
-                  href="https://www.book.downeyautospa.com"
+                  href="https://book.downeyautospa.com/downey-auto-spa"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -325,7 +325,7 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "auto" }}>
                 <a
                   className="ceramic__cta-btn ceramic__cta-btn--card"
-                  href="https://www.book.downeyautospa.com"
+                  href="https://book.downeyautospa.com/downey-auto-spa"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -371,7 +371,7 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "auto" }}>
                 <a
                   className="ceramic__cta-btn ceramic__cta-btn--card"
-                  href="https://www.book.downeyautospa.com"
+                  href="https://book.downeyautospa.com/downey-auto-spa"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -548,7 +548,7 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
             </a>
             <a
               className="ceramic__cta-btn ceramic__cta-btn--large"
-              href="https://www.book.downeyautospa.com"
+              href="https://book.downeyautospa.com/downey-auto-spa"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -603,7 +603,7 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
             <a
               className="ceramic__cta-btn ceramic__cta-btn--large"
-              href="https://www.book.downeyautospa.com"
+              href="https://book.downeyautospa.com/downey-auto-spa"
               target="_blank"
               rel="noopener noreferrer"
             >
