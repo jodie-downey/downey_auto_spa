@@ -89,10 +89,12 @@
   justify-content: center;
   gap: 8px;
   margin-top: 16px;
+  flex-wrap: wrap;
 }
 
 .service__card-button:hover {
   cursor: pointer;
+  opacity: 0.85;
 }
 
 .service__card-button {
@@ -101,8 +103,21 @@
   text-align: center;
   border-radius: 10%;
   background-color: #1d2b45;
+  border: none;
   padding: 6px 10px;
   font-family: SairaCondensed Medium, sans-serif;
+  transition: opacity 0.2s ease;
+}
+
+.service__card-button-book {
+  font-family: "SairaCondensed Bold", sans-serif;
+  font-weight: 700;
+}
+
+.service__card-button-quote {
+  background-color: transparent;
+  border: 2px solid #1d2b45;
+  color: #1d2b45;
 }
 
 @media screen and (max-width: 500px) {

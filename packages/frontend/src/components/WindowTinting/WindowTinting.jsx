@@ -113,13 +113,20 @@ function WindowTinting({ handleQuoteButtonClick }) {
             >
               See Popular Packages →
             </a>
-            <button
+            <a
               className="window-tint__cta-btn"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+            <button
+              className="window-tint__cta-btn window-tint__cta-btn--secondary"
               onClick={() => handleQuoteButtonClick("tint_hero")}
             >
               Get a Quote
             </button>
-            {/* <button className="window-tint__cta-btn window-tint__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
           </div>
         </div>
       </section>
@@ -200,13 +207,20 @@ function WindowTinting({ handleQuoteButtonClick }) {
                   <strong>Best for:</strong> {film.bestFor}
                 </p>
                 <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "auto" }}>
-                  <button
+                  <a
                     className="window-tint__cta-btn window-tint__cta-btn--card"
+                    href="https://www.book.downeyautospa.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Book Now
+                  </a>
+                  <button
+                    className="window-tint__cta-btn window-tint__cta-btn--card window-tint__cta-btn--secondary"
                     onClick={() => handleQuoteButtonClick(film.source)}
                   >
-                    Get a Quote →
+                    Get a Quote
                   </button>
-                  {/* <button className="window-tint__cta-btn window-tint__cta-btn--card window-tint__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
                 </div>
               </div>
             ))}
@@ -391,13 +405,20 @@ function WindowTinting({ handleQuoteButtonClick }) {
             </span>
           </div>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
-            <button
+            <a
               className="window-tint__cta-btn window-tint__cta-btn--large"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+            <button
+              className="window-tint__cta-btn window-tint__cta-btn--large window-tint__cta-btn--secondary"
               onClick={() => handleQuoteButtonClick("tint_final_cta")}
             >
-              Book an Appointment
+              Get a Quote
             </button>
-            {/* <button className="window-tint__cta-btn window-tint__cta-btn--large window-tint__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
           </div>
         </div>
       </section>

@@ -23,21 +23,29 @@ function ServiceCard({
         })}
       </ul>
       <div className="service__card-buttons">
-        <Link to="/price-lists">
-          <button
-            className="service__card-button service__card-button-price"
-            href={priceLink}
-          >
-            View Price Lists
-          </button>
-        </Link>
+        <a
+          className="service__card-button service__card-button-book"
+          href="https://www.book.downeyautospa.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </a>
         <button
           className="service__card-button service__card-button-quote"
           href={quoteLink}
           onClick={onQuoteButtonClick}
         >
-          Get a Custom Quote
+          Get a Quote
         </button>
+        <Link to="/price-lists">
+          <button
+            className="service__card-button service__card-button-price"
+            href={priceLink}
+          >
+            Price List
+          </button>
+        </Link>
       </div>
     </div>
   );

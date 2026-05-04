@@ -31,11 +31,19 @@ function Main({ weatherData, handleQuoteButtonClick }) {
           </p>
         </div>
         <div className="main__hero-cta-wrapper">
-          <button
+          <a
             className="main__hero-cta"
+            href="https://www.book.downeyautospa.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book Now
+          </a>
+          <button
+            className="main__hero-cta main__hero-cta--secondary"
             onClick={() => handleQuoteButtonClick("hero")}
           >
-            Get My Custom Quote
+            Get a Quote
           </button>
         </div>
       </div>

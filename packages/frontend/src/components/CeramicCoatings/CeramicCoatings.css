@@ -143,6 +143,10 @@
 /* ── CTA BUTTONS ──────────────────────────────────── */
 
 .ceramic__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   background-color: #39ecfe;
   color: #0d1626;
   border: none;

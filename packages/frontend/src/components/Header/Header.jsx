@@ -77,6 +77,14 @@ function Header() {
         <Link to="/services">
           <p className="header__services">Services</p>
         </Link>
+        <a
+          className="header__book-now"
+          href="https://www.book.downeyautospa.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Book Now
+        </a>
       </nav>
 
       {/* Mobile Navigation */}
@@ -101,6 +109,15 @@ function Header() {
           <Link to="/services" onClick={closeMenu}>
             Services
           </Link>
+          <a
+            className="header__nav-mobile-book-now"
+            href="https://www.book.downeyautospa.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={closeMenu}
+          >
+            Book Now
+          </a>
         </nav>
       )}
     </header>

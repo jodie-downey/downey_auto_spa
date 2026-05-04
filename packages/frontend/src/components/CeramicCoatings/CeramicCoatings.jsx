@@ -126,13 +126,20 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
             <a className="ceramic__cta-btn ceramic__cta-btn--secondary" href="#ceramic-gallery">
               See Our Work →
             </a>
-            <button
+            <a
               className="ceramic__cta-btn"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+            <button
+              className="ceramic__cta-btn ceramic__cta-btn--secondary"
               onClick={() => handleQuoteButtonClick("ceramic_hero")}
             >
               Get a Quote
             </button>
-            {/* <button className="ceramic__cta-btn ceramic__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
           </div>
         </div>
       </section>
@@ -265,13 +272,20 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
                 </li>
               </ul>
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "auto" }}>
-                <button
+                <a
                   className="ceramic__cta-btn ceramic__cta-btn--card"
+                  href="https://www.book.downeyautospa.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book Now
+                </a>
+                <button
+                  className="ceramic__cta-btn ceramic__cta-btn--card ceramic__cta-btn--secondary"
                   onClick={() => handleQuoteButtonClick("package_max_g")}
                 >
                   Get a Quote
                 </button>
-                {/* <button className="ceramic__cta-btn ceramic__cta-btn--card ceramic__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
               </div>
             </div>
 
@@ -309,13 +323,20 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
                 </li>
               </ul>
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "auto" }}>
-                <button
+                <a
                   className="ceramic__cta-btn ceramic__cta-btn--card"
+                  href="https://www.book.downeyautospa.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book Now
+                </a>
+                <button
+                  className="ceramic__cta-btn ceramic__cta-btn--card ceramic__cta-btn--secondary"
                   onClick={() => handleQuoteButtonClick("package_pro_plus")}
                 >
                   Get a Quote
                 </button>
-                {/* <button className="ceramic__cta-btn ceramic__cta-btn--card ceramic__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
               </div>
             </div>
 
@@ -348,13 +369,20 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
                 </li>
               </ul>
               <div style={{ display: "flex", flexDirection: "column", gap: "8px", marginTop: "auto" }}>
-                <button
+                <a
                   className="ceramic__cta-btn ceramic__cta-btn--card"
+                  href="https://www.book.downeyautospa.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Book Now
+                </a>
+                <button
+                  className="ceramic__cta-btn ceramic__cta-btn--card ceramic__cta-btn--secondary"
                   onClick={() => handleQuoteButtonClick("package_crystal")}
                 >
                   Get a Quote
                 </button>
-                {/* <button className="ceramic__cta-btn ceramic__cta-btn--card ceramic__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
               </div>
             </div>
           </div>
@@ -518,13 +546,20 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
             <a className="ceramic__cta-btn ceramic__cta-btn--large ceramic__cta-btn--secondary" href="#ceramic-gallery">
               See Our Work →
             </a>
-            <button
+            <a
               className="ceramic__cta-btn ceramic__cta-btn--large"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+            <button
+              className="ceramic__cta-btn ceramic__cta-btn--large ceramic__cta-btn--secondary"
               onClick={() => handleQuoteButtonClick("ceramic_mid_cta")}
             >
-              Get a Custom Quote
+              Get a Quote
             </button>
-            {/* <button className="ceramic__cta-btn ceramic__cta-btn--large ceramic__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
           </div>
         </div>
       </section>
@@ -566,13 +601,20 @@ function CeramicCoatings({ handleQuoteButtonClick }) {
             </span>
           </div>
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
-            <button
+            <a
               className="ceramic__cta-btn ceramic__cta-btn--large"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+            <button
+              className="ceramic__cta-btn ceramic__cta-btn--large ceramic__cta-btn--secondary"
               onClick={() => handleQuoteButtonClick("ceramic_final_cta")}
             >
-              Book an Appointment
+              Get a Quote
             </button>
-            {/* <button className="ceramic__cta-btn ceramic__cta-btn--large ceramic__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
           </div>
         </div>
       </section>

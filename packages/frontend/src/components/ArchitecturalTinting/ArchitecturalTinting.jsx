@@ -247,11 +247,18 @@ function ArchitecturalTinting() {
             <a className="arch-tint__cta-btn arch-tint__cta-btn--secondary" href="#arch-gallery">
               See Our Work →
             </a>
-            <a className="arch-tint__cta-btn" href="tel:2707763914">
-              <Phone size={18} />
-              Call for a Quote — 270-776-3914
+            <a
+              className="arch-tint__cta-btn"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
             </a>
-            {/* <button className="arch-tint__cta-btn arch-tint__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
+            <a className="arch-tint__cta-btn arch-tint__cta-btn--secondary" href="tel:2707763914">
+              <Phone size={18} />
+              Call for a Quote
+            </a>
           </div>
         </div>
       </section>
@@ -478,11 +485,18 @@ function ArchitecturalTinting() {
             <a className="arch-tint__cta-btn arch-tint__cta-btn--secondary" href="#arch-gallery">
               See Our Work →
             </a>
-            <a className="arch-tint__cta-btn" href="tel:2707763914">
+            <a
+              className="arch-tint__cta-btn"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+            <a className="arch-tint__cta-btn arch-tint__cta-btn--secondary" href="tel:2707763914">
               <Phone size={18} />
               270-776-3914
             </a>
-            {/* <button className="arch-tint__cta-btn arch-tint__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
           </div>
         </div>
       </section>
@@ -558,12 +572,19 @@ function ArchitecturalTinting() {
           <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", justifyContent: "center" }}>
             <a
               className="arch-tint__cta-btn arch-tint__cta-btn--large"
+              href="https://www.book.downeyautospa.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book Now
+            </a>
+            <a
+              className="arch-tint__cta-btn arch-tint__cta-btn--large arch-tint__cta-btn--secondary"
               href="tel:2707763914"
             >
               <Phone size={18} />
               Call for a Quote
             </a>
-            {/* <button className="arch-tint__cta-btn arch-tint__cta-btn--large arch-tint__cta-btn--secondary" onClick={() => {}}>Schedule your appointment</button> */}
           </div>
         </div>
       </section>
