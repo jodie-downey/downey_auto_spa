@@ -178,6 +178,7 @@
 
 .window-tint__cta-btn--card {
   width: 100%;
+  box-sizing: border-box;
   margin-top: auto;
   padding-top: 12px;
   padding-bottom: 12px;

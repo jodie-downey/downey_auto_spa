@@ -39,12 +39,6 @@ function Main({ weatherData, handleQuoteButtonClick }) {
           >
             Book Now
           </a>
-          <button
-            className="main__hero-cta main__hero-cta--secondary"
-            onClick={() => handleQuoteButtonClick("hero")}
-          >
-            Get a Quote
-          </button>
         </div>
       </div>
       <LiveReviews />
@@ -82,6 +76,12 @@ function Main({ weatherData, handleQuoteButtonClick }) {
             window tinting and business window tinting solutions offer superior
             glare reduction, energy efficiency, and UV protection.
           </p>
+          <Link to="/window-tinting" className="main__service-link">
+            Vehicle Window Tinting →
+          </Link>
+          <Link to="/window-tinting/architectural" className="main__service-link">
+            Home & Office Tinting →
+          </Link>
         </div>
         <div className="main__service-wrapper">
           <img

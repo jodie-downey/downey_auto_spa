@@ -213,45 +213,32 @@
 }
 
 .header__book-now {
-  background: linear-gradient(135deg, #39ecfe, #6fffd2);
-  color: #0e1a2b;
-  font-family: "SairaCondensed Bold", sans-serif;
-  font-size: 17px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  color: #39ecfe;
   text-decoration: none;
-  padding: 7px 22px;
-  border-radius: 999px;
-  border: none;
-  cursor: pointer;
-  transition: filter 0.2s ease, transform 0.2s ease;
-  white-space: nowrap;
+  transition: color 0.3s ease;
+  font-family: SairaCondensed Medium, sans-serif;
+  font-size: 19px;
 }
 
 .header__book-now:hover {
-  filter: brightness(1.08);
-  transform: translateY(-1px);
+  text-decoration: underline;
+  color: #39ecfe;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .header__nav-mobile-book-now {
-  background: linear-gradient(135deg, #39ecfe, #6fffd2);
-  color: #0e1a2b !important;
-  font-family: "SairaCondensed Bold", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-decoration: none !important;
-  padding: 12px 36px;
-  border-radius: 999px;
-  margin-top: 8px;
-  transition: filter 0.2s ease;
+  padding: 12px;
+  color: #39ecfe !important;
+  text-decoration: none;
+  font-family: "Saira Condensed", sans-serif;
+  font-size: 18px;
+  transition: color 0.3s ease;
 }
 
 .header__nav-mobile-book-now:hover {
-  filter: brightness(1.08);
-  color: #0e1a2b !important;
+  color: #39ecfe !important;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 850px) {
